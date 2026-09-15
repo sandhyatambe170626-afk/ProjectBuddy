@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProjectBuddy Quiz</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+<style>
+
+body{
+    margin:0;
+    padding:0;
+    min-height:100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+}
+
+.header{
+    display:flex;
+    background:#7db3bd;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    padding:20px 0;
+}
+
+.header img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+}
+
+.text h1{
+    margin:0;
+    font-size:40px;
+    color:#1e2a38;
+}
+
+.text p{
+    margin:5px 0 0;
+    font-size:18px;
+    text-align:center;
+    color:#1e2a38;
+}
+
+.quiz-container{
+    background:#ffffff;
+    width:90%;
+    max-width:450px;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    margin:60px auto;
+}
+
+.quiz-header h2{
+    text-align:center;
+    color:#ff4081;
+}
+
+ul{
+    list-style:none;
+    padding:0;
+}
+
+.quiz-container ul li{
+    margin:12px 0;
+    background:#fce4ec;
+    padding:12px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+    text-align:left;
+}
+
+.quiz-container ul li:hover{
+    transform:scale(1.04);
+    background:#f8bbd0;
+}
+
+.selected{
+    background:#ff80ab !important;
+    color:#fff;
+}
+
+button{
+    background:#ff80ab;
+    color:white;
+    border:none;
+    padding:12px;
+    font-size:16px;
+    border-radius:25px;
+    cursor:pointer;
+    width:100%;
+    margin-top:15px;
+}
+
+button:hover{
+    background:#ff4081;
+}
+
+.stars{
+    font-size:36px;
+    margin-top:10px;
+    text-align:center;
+    animation:bounce 1s infinite alternate;
+}
+
+@keyframes bounce{
+    from{transform:translateY(0);}
+    to{transform:translateY(-10px);}
+}
+
+.floating-heart{
+    position:fixed;
+    font-size:22px;
+    animation: floatHeart 4s linear infinite;
+    pointer-events:none;
+}
+
+@keyframes floatHeart{
+    0%{transform:translateY(0);opacity:1;}
+    50%{transform:translateY(-50vh) scale(1.3) rotate(20deg);}
+    100%{transform:translateY(-100vh) scale(0.8) rotate(-20deg);opacity:0;}
+}
+
+.sparkle{
+    position:fixed;
+    font-size:18px;
+    animation:sparkleAnim 2s ease-in-out infinite;
+    pointer-events:none;
+}
+
+@keyframes sparkleAnim{
+    0%{opacity:0; transform:scale(0);}
+    50%{opacity:1; transform:scale(1.5);}
+    100%{opacity:0; transform:scale(0);}
+}
+
+.rainbow-text{
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbowMove 3s linear infinite;
+}
+
+@keyframes rainbowMove{
+    0%{background-position:0%;}
+    100%{background-position:100%;}
+}
+
+footer{
+  background:#078095;
+  width:100%;
+  color:#fff;
+  margin-top:40px;
+}
+
+footer .content{
+  max-width:1250px;
+  margin:auto;
+  padding:5px;
+}
+
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:10px;
+  flex-wrap:wrap;
+}
+
+.logo-details{
+  font-size:28px;
+  font-weight:500;
+}
+
+.media-icons a{
+  height:40px;
+  width:40px;
+  margin:10px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.2);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+}
+
+.link-boxes{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+.box{
+  display:flex;
+  gap:30px;
+}
+
+.box li{
+  list-style:none;
+}
+
+.box li a{
+  color:#fff;
+  text-decoration:none;
+}
+
+.bottom-details{
+  background:#067282;
+  padding:15px 40px;
+}
+
+.bottom_text{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+</style>
+</head>
+
+<body>
+
+<a href="index.html" style="text-decoration:none;color:inherit;">
+<div class="header">
+    <img src="image/logo.jpeg">
+    <div class="text">
+        <h1>ProjectBuddy</h1>
+        <p>Student Collaboration Hub</p>
+    </div>
+</div>
+</a>
+
+<div class="quiz-container">
+    <div class="quiz-header">
+        <h2 id="question"></h2>
+        <ul id="options">
+            <li data-id="a" id="a_text"></li>
+            <li data-id="b" id="b_text"></li>
+            <li data-id="c" id="c_text"></li>
+            <li data-id="d" id="d_text"></li>
+        </ul>
+    </div>
+
+    <button id="submit">Submit Answer</button>
+</div>
+
+<script>
+
+const quizData=[
+{question:"Which planet is known as the Red Planet?",a:"Earth",b:"Mars",c:"Jupiter",d:"Venus",correct:"b"},
+{question:"What is the national animal of India?",a:"Lion",b:"Elephant",c:"Tiger",d:"Peacock",correct:"c"},
+{question:"Which gas do plants take in?",a:"Oxygen",b:"Carbon Dioxide",c:"Hydrogen",d:"Nitrogen",correct:"b"},
+{question:"2 + 5 = ?",a:"6",b:"7",c:"8",d:"9",correct:"b"},
+{question:"Which is the largest ocean?",a:"Indian Ocean",b:"Arctic Ocean",c:"Pacific Ocean",d:"Atlantic Ocean",correct:"c"},
+{question:"Who wrote National Anthem?",a:"Gandhi",b:"Tagore",c:"Kalam",d:"Nehru",correct:"b"},
+{question:"Water freezes at?",a:"0°C",b:"10°C",c:"50°C",d:"100°C",correct:"a"},
+{question:"Which organ pumps blood?",a:"Lungs",b:"Brain",c:"Heart",d:"Kidney",correct:"c"},
+{question:"Renewable energy source?",a:"Coal",b:"Petrol",c:"Solar",d:"Diesel",correct:"c"},
+{question:"Square of 5?",a:"10",b:"20",c:"25",d:"30",correct:"c"},
+{question:"Festival of Lights?",a:"Holi",b:"Diwali",c:"Eid",d:"Christmas",correct:"b"},
+{question:"Longest river in India?",a:"Yamuna",b:"Godavari",c:"Ganga",d:"Krishna",correct:"c"},
+{question:"Smallest prime number?",a:"0",b:"1",c:"2",d:"3",correct:"c"},
+{question:"Plants make food by?",a:"Respiration",b:"Photosynthesis",c:"Digestion",d:"Transpiration",correct:"b"},
+{question:"Which is a bird?",a:"Dog",b:"Cat",c:"Parrot",d:"Fish",correct:"c"}
+];
+
+const questionEl=document.getElementById("question");
+const options=document.querySelectorAll("#options li");
+const submitBtn=document.getElementById("submit");
+
+let currentQuiz=0;
+let score=0;
+let selected=null;
+
+loadQuiz();
+
+function loadQuiz(){
+    selected=null;
+    options.forEach(opt=>opt.classList.remove("selected"));
+    const data=quizData[currentQuiz];
+    questionEl.innerText=data.question;
+    document.getElementById("a_text").innerText=data.a;
+    document.getElementById("b_text").innerText=data.b;
+    document.getElementById("c_text").innerText=data.c;
+    document.getElementById("d_text").innerText=data.d;
+}
+
+options.forEach(opt=>{
+    opt.addEventListener("click",()=>{
+        options.forEach(o=>o.classList.remove("selected"));
+        opt.classList.add("selected");
+        selected=opt.getAttribute("data-id");
+    });
+});
+
+submitBtn.addEventListener("click",()=>{
+    if(selected){
+        if(selected===quizData[currentQuiz].correct){
+            score++;
+        }
+
+        currentQuiz++;
+
+        if(currentQuiz<quizData.length){
+            loadQuiz();
+        }else{
+
+            let stars="";
+            if(score>=12) stars="⭐⭐⭐⭐⭐";
+            else if(score>=9) stars="⭐⭐⭐⭐";
+            else if(score>=6) stars="⭐⭐⭐";
+            else if(score>=3) stars="⭐⭐";
+            else stars="⭐";
+
+            document.querySelector(".quiz-header").innerHTML=
+            `<h2 class="rainbow-text">You scored ${score}/${quizData.length}</h2>
+             <div class="stars">${stars}</div>
+             <h3 style="text-align:center;">🎉 Amazing Work 🎉</h3>`;
+
+            submitBtn.style.display="none";
+
+            for(let i=0;i<40;i++){
+                let heart=document.createElement("div");
+                heart.className="floating-heart";
+                heart.innerText="💖";
+                heart.style.left=Math.random()*100+"%";
+                document.body.appendChild(heart);
+            }
+        }
+    }
+});
+
+</script>
+
+<footer>
+  <div class="content">
+    <div class="top">
+      <div class="logo-details">
+         <span class="logo_name">ProjectBuddy</span>
+      </div>
+
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="link-boxes">
+      <ul class="box">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="signin.html">Login</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="bottom-details">
+    <div class="bottom_text">
+      <span>Copyright © 2026 ProjectBuddy. All rights reserved</span>
+      <span>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

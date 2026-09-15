@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Announcements</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+}
+
+.top-header{
+    width:100%;
+    background:#7faeb5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+    cursor:pointer;
+}
+
+.top-header img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:white;
+    padding:8px;
+}
+
+.title-box h1{
+    font-size:40px;
+    font-weight:800;
+    color:#1f2937;
+}
+
+.title-box p{
+    font-size:18px;
+    color:#1f2937;
+}
+
+.main{
+    display:flex;
+    justify-content:center;
+    padding:30px 20px;
+}
+
+.container{
+    max-width:800px;
+    width:100%;
+    background:rgba(255,255,255,0.95);
+    border-radius:30px;
+    padding:40px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.3);
+}
+
+h1{
+    font-size:2.2rem;
+    font-weight:700;
+    color:#2d3748;
+    margin-bottom:25px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+h1 i{
+    color:#667eea;
+}
+
+.message-feed{
+    list-style:none;
+}
+
+.message-card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    margin-bottom:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    border-left:5px solid #667eea;
+    transition:0.3s;
+}
+
+.message-card:hover{
+    transform:translateY(-5px);
+}
+
+.message-text{
+    font-size:1.1rem;
+    margin-bottom:8px;
+}
+
+.message-time{
+    font-size:0.85rem;
+    color:#718096;
+}
+
+.empty-state{
+    text-align:center;
+    padding:40px;
+    color:#718096;
+}
+
+.empty-state i{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.live{
+    text-align:center;
+    margin-top:15px;
+    color:#555;
+}
+
+footer{
+  background:#078095;
+  width:100%;
+  color:#fff;
+  margin-top:40px;
+}
+
+footer .content{
+  max-width:1250px;
+  margin:auto;
+  padding:5px;
+}
+
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:10px;
+  flex-wrap:wrap;
+}
+
+.logo-details{
+  font-size:28px;
+  font-weight:500;
+}
+
+.media-icons a{
+  height:40px;
+  width:40px;
+  margin:10px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.2);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  transition:0.3s;
+}
+
+.media-icons a:hover{
+  background:#fff;
+  color:#078095;
+}
+
+.link-boxes{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+.box{
+  width:auto;
+}
+
+.box .link_name{
+  display:none;
+}
+
+.box{
+  display:flex;
+  gap:30px;
+}
+
+.box li{
+  list-style:none;
+}
+
+.box li a{
+  color:#fff;
+  text-decoration:none;
+  opacity:0.8;
+  transition:0.3s;
+}
+
+.box li a:hover{
+  opacity:1;
+  text-decoration:underline;
+}
+
+.input-box input{
+  height:40px;
+  width:100%;
+  margin:5px 0;
+  border-radius:4px;
+  border:none;
+  padding:0 10px;
+}
+
+.input-box input[type="button"]{
+  background:#fff;
+  color:#078095;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.bottom-details{
+  background:#067282;
+  padding:15px 40px;
+}
+
+.bottom_text{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  font-size:14px;
+}
+
+.bottom_text a{
+  color:#fff;
+  margin-left:10px;
+  text-decoration:none;
+}
+
+.bottom_text a:hover{
+  text-decoration:underline;
+}
+
+@media (max-width:768px){
+  .top{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .link-boxes{
+    flex-direction:column;
+  }
+
+  .box{
+    width:100%;
+    margin-bottom:20px;
+  }
+
+  .bottom_text{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-header" onclick="goHome()">
+    <img src="image/logo.jpeg" alt="logo">
+    <div class="title-box">
+        <h1>ProjectBuddy</h1>
+        <p>Student Collaboration Hub</p>
+    </div>
+</div>
+
+<div class="main">
+<div class="container">
+
+<h1><i class="fas fa-bullhorn"></i> Latest Announcements</h1>
+
+<ul class="message-feed" id="message-feed">
+<li class="empty-state">
+<i class="fas fa-inbox"></i>
+<p>No announcements yet</p>
+</li>
+</ul>
+
+<div class="live">
+<i class="fas fa-sync-alt fa-spin"></i> Live updates
+</div>
+
+</div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+
+<script>
+function goHome(){
+    window.location.href = "index.html";
+}
+
+const firebaseConfig = {
+apiKey: "AIzaSyCmn1FoHjGE573KKGxYCXnENAvLPwQpDl8",
+authDomain: "projectbuddy-2d19a.firebaseapp.com",
+databaseURL: "https://projectbuddy-2d19a-default-rtdb.firebaseio.com",
+projectId: "projectbuddy-2d19a",
+storageBucket: "projectbuddy-2d19a.firebasestorage.app",
+messagingSenderId: "620666475411",
+appId: "1:620666475411:web:074cccd91cb44d4a508e66"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+const messageFeed = document.getElementById('message-feed');
+
+db.ref('messages').orderByChild('timestamp').limitToLast(20)
+.on('value', snapshot => {
+
+const messages = snapshot.val();
+
+if(!messages){
+messageFeed.innerHTML = '<li class="empty-state"><i class="fas fa-inbox"></i><p>No announcements yet</p></li>';
+return;
+}
+
+const arr = Object.entries(messages).map(([id,msg]) => ({id,...msg}));
+arr.sort((a,b)=>(b.timestamp||0)-(a.timestamp||0));
+
+let html='';
+
+arr.forEach(msg=>{
+const time = msg.timestamp ? new Date(msg.timestamp).toLocaleString() : 'Just now';
+
+html += `
+<li class="message-card">
+<div class="message-text">${msg.text}</div>
+<div class="message-time"><i class="far fa-clock"></i> ${time}</div>
+</li>
+`;
+});
+
+messageFeed.innerHTML = html;
+
+});
+</script>
+
+<footer>
+  <div class="content">
+
+    <div class="top">
+      <div class="logo-details">
+         <span class="logo_name">ProjectBuddy</span>
+      </div>
+
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="link-boxes">
+
+     <ul class="box">
+        <li class="link_name">Website</li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="signin.html">Login</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="admin.html">Admin</a></li>
+
+        <li class="link_name">Account</li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="bottom-details">
+    <div class="bottom_text">
+      <span>
+        Copyright © 2026 ProjectBuddy. All rights reserved
+      </span>
+      <span>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

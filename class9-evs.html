@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 9 Evs Projects - Student Project Hub</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+}
+
+.header{
+    display:flex;
+background:#7db3bd;
+
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    padding-top:40px;
+}
+
+.header img{
+    width:120px;
+    height:120px;
+    border-radius:150%;
+    object-fit:contain;
+}
+
+.text h1{
+    margin:0;
+    font-size:45px;
+    font-weight:800;
+    letter-spacing:1px;
+    color:#1e2a38;
+}
+
+.text p{
+    margin:5px 0 0;
+    font-size:20px;
+    text-align: center;
+    color:#1e2a38;
+
+}
+.home-link{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.class-header{
+background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+    color:black;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.header h1{
+    margin:0;
+    font-size:30px;
+}
+
+.container{
+    max-width:1100px;
+    margin:40px auto;
+    padding:20px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card h3{
+    margin-top:0;
+color:#0072ff; 
+}
+
+.card p{
+    font-size:14px;
+    color:#444;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-bottom:20px;
+    padding:8px 15px;
+background:#0072ff; 
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+.back-btn:hover{
+background:#005ecb; 
+}
+
+.explore-btn{
+display:inline-block;
+margin-top:10px;
+padding:8px 15px;
+background:#0072ff; 
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-size:14px;
+}
+
+.explore-btn:hover{
+background:#1e7e34;
+}
+
+footer{
+  background:#078095;
+  width:100%;
+  color:#fff;
+  margin-top:40px;
+}
+
+footer .content{
+  max-width:1250px;
+  margin:auto;
+  padding:5px;
+}
+
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:10px;
+  flex-wrap:wrap;
+}
+
+.logo-details{
+  font-size:28px;
+  font-weight:500;
+}
+
+.media-icons a{
+  height:40px;
+  width:40px;
+  margin:10px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.2);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  transition:0.3s;
+}
+
+.media-icons a:hover{
+  background:#fff;
+  color:#078095;
+}
+.link-boxes{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+.box{
+  width:auto;               
+}
+
+.box .link_name{
+  display:none;             
+}
+
+.box{
+  display:flex;
+  gap:30px;                
+}
+
+.box li{
+  list-style:none;
+}
+.box li a{
+  color:#fff;
+  text-decoration:none;
+  opacity:0.8;
+  transition:0.3s;
+}
+
+.box li a:hover{
+  opacity:1;
+  text-decoration:underline;
+}
+
+.input-box input{
+  height:40px;
+  width:100%;
+  margin:5px 0;
+  border-radius:4px;
+  border:none;
+  padding:0 10px;
+}
+
+.input-box input[type="button"]{
+  background:#fff;
+  color:#078095;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.bottom-details{
+  background:#067282;
+  padding:15px 40px;
+}
+
+.bottom_text{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  font-size:14px;
+}
+
+.bottom_text a{
+  color:#fff;
+  margin-left:10px;
+  text-decoration:none;
+}
+
+.bottom_text a:hover{
+  text-decoration:underline;
+}
+
+@media (max-width:768px){
+  .top{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .link-boxes{
+    flex-direction:column;
+  }
+
+  .box{
+    width:100%;
+    margin-bottom:20px;
+  }
+
+  .bottom_text{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+</style>
+</head>
+<body>
+<a href="index.html" class="home-link">
+    <div class="header">
+        <img src="image/logo.jpeg" alt="ProjectBuddy Logo">
+        <div class="text">
+            <h1>ProjectBuddy</h1>
+            <p>Student Collaboration Hub</p>
+        </div>
+    </div>
+</a>
+
+<div class="class-header">
+    <h1> Class 9 Evs Projects</h1>
+   
+</div>
+
+<div class="container">
+
+<a href="section.html" class="back-btn">Back</a>
+
+<div class="grid">
+
+<div class="card">
+<h3>1.  Plastic-Free Locality Survey</h3>
+<p><strong>Concepts:</strong>Environment, pollution control, data collection, community awareness</p>
+<p><strong>Use</strong>Helps identify plastic usage in the locality and suggests eco-friendly alternatives. Promotes reduction of single-use plastic and supports environmental cleanliness drives.</p>
+<a href="signin.html" class="explore-btn">Explore Project</a>
+</div>
+
+<div class="card">
+<h3>2.E-Waste: A Growing Environmental Threat</h3>
+<p><strong>Concepts:</strong>Electronic waste management, recycling, hazardous materials, sustainability</p>
+<p><strong>Use:</strong> Creates awareness about safe disposal and recycling of electronic waste. Encourages responsible consumption and protects soil and water from toxic substances.</p>
+<a href="signin.html" class="explore-btn">Explore Project</a>
+</div>
+
+<div class="card">
+<h3>3. Air Pollution and Respiratory Health</h3>
+<p><strong>Concepts:</strong>Air quality, pollutants (PM2.5, CO₂), human respiratory system, public health</p>
+<p><strong>Use:</strong>Explains how air pollution affects lungs and overall health. Encourages plantation drives and pollution control measures to create healthier living conditions.</p>
+<a href="signin.html" class="explore-btn">Explore Project</a>
+</div>
+
+<div class="card">
+<h3>4. Biodiversity Loss and Conservation</h3>
+<p><strong>Concepts:</strong>Ecosystem balance, endangered species, conservation methods, sustainability</p>
+<p><strong>Use:</strong>Highlights the importance of protecting plants and animals. Promotes wildlife conservation, afforestation, and environmental protection activities.</p>
+<a href="signin.html" class="explore-btn">Explore Project</a>
+</div>
+
+<div class="card">
+<h3>5.Urban Waste Management System</h3>
+<p><strong>Concepts:</strong> Solid waste management, recycling process, composting, municipal systems</p>
+<p><strong>Use:</strong> Demonstrates how cities manage garbage through segregation, recycling, and composting. Encourages responsible waste disposal habits among citizens.</p>
+<a href="signin.html" class="explore-btn">Explore Project</a>
+</div>
+
+</div>
+</div>
+
+<footer>
+  <div class="content">
+
+    <div class="top">
+      <div class="logo-details">
+         <span class="logo_name">ProjectBuddy</span>
+      </div>
+
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="link-boxes">
+
+      <ul class="box">
+        <li class="link_name">Website</li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="signin.html">Login</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admin.html">Admin</a></li>
+
+        <li class="link_name">Account</li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="bottom-details">
+    <div class="bottom_text">
+      <span>
+        Copyright © 2026 ProjectBuddy. All rights reserved
+      </span>
+      <span>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </span>
+    </div>
+  </div>
+
+</footer>
+</body>
+</html>

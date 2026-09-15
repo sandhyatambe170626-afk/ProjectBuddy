@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EVS Blogs - ProjectBuddy</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+}
+
+.header{
+    display:flex;
+background:#7db3bd;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    padding-top:40px;
+}
+
+.header img{
+    width:120px;
+    height:120px;
+    border-radius:150%;
+    object-fit:contain;
+}
+
+.text h1{
+    margin:0;
+    font-size:45px;
+    font-weight:800;
+    letter-spacing:1px;
+    color:#1e2a38;
+}
+
+.text p{
+    margin:5px 0 0;
+    font-size:20px;
+    text-align: center;
+    color:#1e2a38;
+
+}
+.home-link{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.blog-header{
+    background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+    text-align:center;
+    padding:50px 20px;
+}
+
+.header h1{
+    margin:0;
+    font-size:40px;
+    color:#1e2a38;
+}
+
+.header p{
+    font-size:18px;
+    margin-top:10px;
+}
+
+.container{
+    max-width:1100px;
+    margin:40px auto;
+    padding:20px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+    text-align:center;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card a{
+    text-decoration:none;
+    color:#764ba2;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.card i{
+    font-size:35px;
+    margin-bottom:10px;
+    color:#078095;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-bottom:20px;
+    padding:8px 15px;
+    background:#1f4037;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+.back-btn:hover{
+    background:#14532d;
+}
+
+footer{
+  background:#078095;
+  width:100%;
+  color:#fff;
+  margin-top:40px;
+}
+
+footer .content{
+  max-width:1250px;
+  margin:auto;
+  padding:5px;
+}
+
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:10px;
+  flex-wrap:wrap;
+}
+
+.logo-details{
+  font-size:28px;
+  font-weight:500;
+}
+
+.media-icons a{
+  height:40px;
+  width:40px;
+  margin:10px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.2);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  transition:0.3s;
+}
+
+.media-icons a:hover{
+  background:#fff;
+  color:#078095;
+}
+.link-boxes{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+.box{
+  width:auto;               
+}
+
+.box .link_name{
+  display:none;             
+}
+
+.box{
+  display:flex;
+  gap:30px;                
+}
+
+.box li{
+  list-style:none;
+}
+.box li a{
+  color:#fff;
+  text-decoration:none;
+  opacity:0.8;
+  transition:0.3s;
+}
+
+.box li a:hover{
+  opacity:1;
+  text-decoration:underline;
+}
+
+.input-box input{
+  height:40px;
+  width:100%;
+  margin:5px 0;
+  border-radius:4px;
+  border:none;
+  padding:0 10px;
+}
+
+.input-box input[type="button"]{
+  background:#fff;
+  color:#078095;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.bottom-details{
+  background:#067282;
+  padding:15px 40px;
+}
+
+.bottom_text{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  font-size:14px;
+}
+
+.bottom_text a{
+  color:#fff;
+  margin-left:10px;
+  text-decoration:none;
+}
+
+.bottom_text a:hover{
+  text-decoration:underline;
+}
+
+@media (max-width:768px){
+  .top{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .link-boxes{
+    flex-direction:column;
+  }
+
+  .box{
+    width:100%;
+    margin-bottom:20px;
+  }
+
+  .bottom_text{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<a href="index.html" class="home-link">
+<div class="header">
+    <img src="image/logo.jpeg" alt="ProjectBuddy Logo">
+        <div class="text">
+        <h1>ProjectBuddy</h1>
+        <p>Student Collaboration Hub</p>
+    </div>
+</div>
+</a>
+
+<div class="blog-header">
+    <h1>EVS Blogs</h1>
+    <p>Click any project to open full blog content</p>
+</div>
+
+<div class="container">
+
+<a href="blog.html" class="back-btn">Back</a>
+
+<div class="grid">
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/02/my-green-home.html" target="_blank">
+My Green Home
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/02/animals-around-us-and-their-importance.html" target="_blank">
+Animals Around Us and Their Importance
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/02/air-pollution-and-its-effects.html" target="_blank">
+Air Pollution and Its Effects
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/02/festival-and-environment.html" target="_blank">
+Festival and Environment
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/02/my-neighbourhood-survey.html" target="_blank">
+My Neighbourhood Survey
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/02/plastic-pollution-in-my-area.html" target="_blank">
+Plastic Pollution in My Area
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/03/solar-energy-vs-electricity-from-coal.html" target="_blank">
+Solar Energy vs Electricity from Coal
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/03/air-purifying-plants-at-home.html" target="_blank">
+Air Purifying Plants at Home
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/03/impact-of-global-warming-on-polar.html" target="_blank">
+Impact of Global Warming on Polar Regions
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/03/greywater-recycling-system.html" target="_blank">
+Greywater Recycling System
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/03/save-mangroves-protect-coastal-areas.html" target="_blank">
+Save Mangroves Protect Coastal Areas
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/03/study-of-renewable-vs-non-renewable.html" target="_blank">
+Study of Renewable vs Non-Renewable Resources
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/03/forest-ecosystem.html" target="_blank">
+Forest Ecosystem
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/03/eco-friendly-transportation.html" target="_blank">
+Eco Friendly Transportation
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/03/food-wastage-and-its-impact.html" target="_blank">
+Food Wastage and Its Impact
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/03/carbon-footprint-of-my-daily-life.html" target="_blank">
+Carbon Footprint of My Daily Life
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/03/zero-waste-school-project.html" target="_blank">
+Zero Waste School Project
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/03/study-of-water-pollution-in-local-area.html" target="_blank">
+Study of Water Pollution in Local Area
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/03/impact-of-urbanization-on-environment.html" target="_blank">
+Impact of Urbanization on Environment
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/03/effects-of-climate-change-on-indian.html" target="_blank">
+Effects of Climate Change on Indian Environment
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/03/microplastics-in-daily-life.html" target="_blank">
+Microplastics in Daily Life
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/03/food-waste-management-at-home-and-school.html" target="_blank">
+Food Waste Management at Home and School
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/03/urban-green-spaces-and-their-importance.html" target="_blank">
+Urban Green Spaces and Their Importance
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/03/sustainable-packaging-alternatives.html" target="_blank">
+Sustainable Packaging Alternatives
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthubb.blogspot.com/2026/03/impact-of-noise-pollution-on-humans-and.html" target="_blank">
+Impact of Noise Pollution on Humans and Environment
+</a>
+</div>
+
+</div>
+</div>
+
+<footer>
+  <div class="content">
+
+    <div class="top">
+      <div class="logo-details">
+         <span class="logo_name">ProjectBuddy</span>
+      </div>
+
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="link-boxes">
+
+      <ul class="box">
+        <li class="link_name">Website</li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="signin.html">Login</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="admin.html">Admin</a></li>
+
+        <li class="link_name">Account</li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="bottom-details">
+    <div class="bottom_text">
+      <span>
+        Copyright © 2026 ProjectBuddy. All rights reserved
+      </span>
+      <span>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

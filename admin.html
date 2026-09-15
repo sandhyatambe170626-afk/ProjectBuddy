@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Console</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Inter', sans-serif;
+background: #f0f2f5;
+color: #1e293b;
+line-height: 1.6;
+}
+
+.site-header{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+background:#79a7b0;
+padding:20px;
+}
+
+.site-header img{
+width:100px;
+height:100px;
+border-radius:50%;
+background:white;
+padding:6px;
+}
+
+.header-text{
+display:flex;
+flex-direction:column;
+}
+
+.header-text h1{
+font-size:45px;
+font-weight:800;
+color:#1e2a38;
+letter-spacing:1px;
+}
+
+.header-text p{
+font-size:20px;
+color:#1e2a38;
+margin-top:5px;
+}
+
+.home-link{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+
+#login-container {
+max-width: 400px;
+margin: 100px auto;
+background: white;
+border-radius: 16px;
+padding: 40px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+#login-container h2 {
+text-align: center;
+margin-bottom: 30px;
+font-weight: 600;
+color: #0f172a;
+}
+.input-group {
+margin-bottom: 20px;
+}
+.input-group label {
+display: block;
+margin-bottom: 8px;
+font-weight: 500;
+color: #334155;
+}
+.input-group input {
+width: 100%;
+padding: 12px 16px;
+border: 1px solid #cbd5e1;
+border-radius: 8px;
+font-size: 1rem;
+transition: 0.2s;
+}
+.input-group input:focus {
+outline: none;
+border-color: #3b82f6;
+box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+}
+button {
+width: 100%;
+padding: 12px;
+background: #3b82f6;
+color: white;
+border: none;
+border-radius: 8px;
+font-size: 1rem;
+font-weight: 600;
+cursor: pointer;
+transition: background 0.2s;
+}
+button:hover {
+background: #2563eb;
+}
+#login-error {
+color: #dc2626;
+margin-top: 15px;
+text-align: center;
+}
+
+#dashboard {
+display: none;
+min-height: 100vh;
+}
+.sidebar {
+position: fixed;
+top: 0;
+left: 0;
+width: 260px;
+height: 100vh;
+background: white;
+box-shadow: 2px 0 10px rgba(0,0,0,0.03);
+padding: 30px 20px;
+}
+
+.sidebar h3 {
+font-size: 1.5rem;
+font-weight: 700;
+color: #0f172a;
+margin-bottom: 40px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.sidebar h3 i {
+color: #3b82f6;
+}
+.sidebar ul {
+list-style: none;
+}
+.sidebar li {
+margin-bottom: 10px;
+}
+.sidebar a {
+display: flex;
+align-items: center;
+gap: 12px;
+padding: 12px 16px;
+color: #334155;
+text-decoration: none;
+border-radius: 8px;
+transition: 0.2s;
+font-weight: 500;
+}
+.sidebar a:hover, .sidebar a.active {
+background: #f1f5f9;
+color: #0f172a;
+}
+.sidebar a i {
+width: 24px;
+color: #64748b;
+}
+
+.main-content {
+margin-left: 260px;
+padding: 30px 40px;
+}
+
+.header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 30px;
+}
+.header h1 {
+font-size: 2rem;
+font-weight: 700;
+color: #0f172a;
+}
+.logout-btn {
+background: #ef4444;
+width: auto;
+padding: 10px 20px;
+}
+.logout-btn:hover {
+background: #dc2626;
+}
+.card {
+background: white;
+border-radius: 16px;
+padding: 24px;
+box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+margin-bottom: 30px;
+}
+.card h2 {
+font-size: 1.25rem;
+font-weight: 600;
+margin-bottom: 20px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+}
+th {
+text-align: left;
+padding: 12px 8px;
+background: #f8fafc;
+font-weight: 600;
+color: #475569;
+}
+td {
+padding: 12px 8px;
+border-bottom: 1px solid #e2e8f0;
+}
+.status-badge {
+padding: 4px 8px;
+border-radius: 20px;
+font-size: 0.75rem;
+font-weight: 600;
+text-transform: uppercase;
+}
+.status-completed { background: #dcfce7; color: #166534; }
+.status-processing { background: #fef9c3; color: #854d0e; }
+.status-failed { background: #fee2e2; color: #991b1b; }
+
+.message-input {
+display: flex;
+gap: 10px;
+margin-bottom: 30px;
+}
+
+.message-input textarea {
+flex: 1;
+padding: 12px;
+border: 1px solid #cbd5e1;
+border-radius: 8px;
+font-size: 1rem;
+resize: vertical;
+min-height: 80px;
+}
+
+.message-input button {
+width: auto;
+padding: 12px 24px;
+}
+
+.message-list {
+list-style: none;
+}
+
+.message-item {
+background: #f8fafc;
+border-radius: 8px;
+padding: 16px;
+margin-bottom: 12px;
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+}
+.message-content {
+flex: 1;
+}
+.message-time {
+font-size: 0.75rem;
+color: #64748b;
+margin-top: 4px;
+}
+.delete-btn {
+background: none;
+border: none;
+color: #ef4444;
+cursor: pointer;
+font-size: 1.2rem;
+width: auto;
+padding: 0 8px;
+}
+.delete-btn:hover {
+color: #dc2626;
+}
+</style>
+</head>
+
+<body>
+
+<a href="index.html" class="home-link">
+<div class="site-header">
+    <img src="image/logo.jpeg" alt="ProjectBuddy Logo">
+    <div class="header-text">
+        <h1>ProjectBuddy</h1>
+        <p>Student Collaboration Hub</p>
+    </div>
+</div>
+</a>
+
+<div id="login-container">
+<h2><i class="fas fa-lock" style="margin-right: 10px;"></i>Admin Login</h2>
+<div class="input-group">
+<label>Email</label>
+<input type="email" id="email" placeholder="admin@example.com">
+</div>
+<div class="input-group">
+<label>Password</label>
+<input type="password" id="password" placeholder="••••••••">
+</div>
+<button id="login-btn">Login</button>
+<div id="login-error"></div>
+</div>
+
+<div id="dashboard">
+<div class="sidebar">
+<h3><i class="fas fa-cube"></i> Admin</h3>
+<ul>
+<li><a href="#" class="nav-link active" data-tab="users"><i class="fas fa-shopping-cart"></i> Users</a></li>
+<li><a href="#" class="nav-link" data-tab="messages"><i class="fas fa-comment-dots"></i> Messages</a></li>
+</ul>
+</div>
+<div class="main-content">
+<div class="header">
+<h1 id="tab-title">Users</h1>
+<button id="logout" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+</div>
+
+<div id="users-tab" class="tab-content">
+<div class="card">
+<h2><i class="fas fa-list"></i> All Users</h2>
+<div style="overflow-x: auto;">
+<table id="users-table">
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>class</th>
+<th>Status</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody id="Users-body">
+<tr><td colspan="7">Loading users...</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div id="messages-tab" class="tab-content" style="display: none;">
+<div class="card">
+<h2><i class="fas fa-pen"></i> Post New Message</h2>
+<div class="message-input">
+<textarea id="new-message" placeholder="Type your message here..."></textarea>
+<button id="post-message-btn">Post Message</button>
+</div>
+</div>
+<div class="card">
+<h2><i class="fas fa-history"></i> Previous Messages</h2>
+<ul class="message-list" id="message-list">
+<li>Loading messages...</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+
+<script>
+const firebaseConfig = {
+apiKey: "AIzaSyCmn1FoHjGE573KKGxYCXnENAvLPwQpDl8",
+authDomain: "projectbuddy-2d19a.firebaseapp.com",
+databaseURL: "https://projectbuddy-2d19a-default-rtdb.firebaseio.com",
+projectId: "projectbuddy-2d19a",
+storageBucket: "projectbuddy-2d19a.appspot.com",
+messagingSenderId: "620666475411",
+appId: "1:620666475411:web:074cccd91cb44d4a508e66"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+const auth = firebase.auth();
+const db = firebase.database();
+
+const loginContainer = document.getElementById('login-container');
+const dashboard = document.getElementById('dashboard');
+const loginBtn = document.getElementById('login-btn');
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
+const loginError = document.getElementById('login-error');
+const logoutBtn = document.getElementById('logout');
+const navLinks = document.querySelectorAll('.nav-link');
+
+const usersTab = document.getElementById('users-tab');
+const messagesTab = document.getElementById('messages-tab');
+
+const tabTitle = document.getElementById('tab-title');
+const usersBody = document.getElementById('Users-body');
+
+const newMessage = document.getElementById('new-message');
+const postBtn = document.getElementById('post-message-btn');
+const messageList = document.getElementById('message-list');
+
+auth.onAuthStateChanged(user => {
+if (user) {
+loginContainer.style.display = 'none';
+dashboard.style.display = 'block';
+
+loadUsers();
+setupRealtimeMessages();
+
+} else {
+loginContainer.style.display = 'block';
+dashboard.style.display = 'none';
+}
+});
+
+loginBtn.addEventListener('click', () => {
+auth.signInWithEmailAndPassword(emailInput.value, passwordInput.value)
+.catch(error => {
+loginError.textContent = error.message;
+});
+});
+
+logoutBtn.addEventListener('click', () => {
+auth.signOut();
+});
+
+navLinks.forEach(link => {
+link.addEventListener('click', (e) => {
+e.preventDefault();
+
+navLinks.forEach(l => l.classList.remove('active'));
+link.classList.add('active');
+
+const tab = link.dataset.tab;
+
+if (tab === 'users') {
+usersTab.style.display = 'block';
+messagesTab.style.display = 'none';
+tabTitle.textContent = 'Users';
+} else {
+usersTab.style.display = 'none';
+messagesTab.style.display = 'block';
+tabTitle.textContent = 'Messages';
+}
+});
+});
+
+function loadUsers() {
+
+db.ref('users').on('value', snapshot => {
+
+if (!snapshot.exists()) {
+usersBody.innerHTML = "<tr><td colspan='5'>No users found</td></tr>";
+return;
+}
+
+let html = "";
+
+snapshot.forEach(child => {
+const u = child.val();
+
+const date = u.timestamp
+? new Date(u.timestamp).toLocaleString()
+: "N/A";
+
+html += `
+<tr>
+<td>${u.name || ''}</td>
+<td>${u.email || ''}</td>
+<td>${u.class || ''}</td>
+<td><span class="status-badge status-completed">Active</span></td>
+<td>${date}</td>
+</tr>
+`;
+});
+
+usersBody.innerHTML = html;
+
+});
+}
+
+function setupRealtimeMessages() {
+
+db.ref('messages').on('value', snapshot => {
+
+if (!snapshot.exists()) {
+messageList.innerHTML = "<li>No messages yet.</li>";
+return;
+}
+
+let html = "";
+
+const messagesArray = [];
+
+snapshot.forEach(child => {
+messagesArray.push({
+id: child.key,
+...child.val()
+});
+});
+
+messagesArray.sort((a,b)=>(b.timestamp||0)-(a.timestamp||0));
+
+messagesArray.forEach(msg => {
+
+const time = msg.timestamp
+? new Date(msg.timestamp).toLocaleString()
+: "";
+
+html += `
+<li class="message-item">
+<div class="message-content">
+<div>${msg.text}</div>
+<div class="message-time">${time}</div>
+</div>
+<button class="delete-btn" data-id="${msg.id}">
+<i class="fas fa-trash"></i>
+</button>
+</li>
+`;
+
+});
+
+messageList.innerHTML = html;
+
+document.querySelectorAll('.delete-btn').forEach(btn => {
+btn.addEventListener('click', (e) => {
+
+const id = e.currentTarget.dataset.id;
+
+db.ref('messages/' + id).remove();
+
+});
+});
+
+});
+}
+
+postBtn.addEventListener('click', () => {
+
+const text = newMessage.value.trim();
+
+if (!text) return;
+
+db.ref('messages').push({
+text: text,
+timestamp: Date.now()
+});
+
+newMessage.value = "";
+
+});
+</script>
+</body>
+</html>

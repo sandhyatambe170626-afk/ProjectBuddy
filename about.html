@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Science Projects Hub</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+
+.header{
+    display:flex;
+   background:#7db3bd;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    padding-top:40px;
+}
+
+.header img{
+    width:120px;
+    height:120px;
+    border-radius:150%;
+    object-fit:contain;
+}
+
+.text h1{
+    margin:0;
+    font-size:45px;
+    font-weight:800;
+    letter-spacing:1px;
+    color:#1e2a38;
+}
+
+.text p{
+    margin:5px 0 0;
+    font-size:20px;
+    text-align: center;
+    color:#1e2a38;
+
+}
+.home-link{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.about-header{
+    background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+    color:black;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.about-header h1{
+    margin:0;
+    font-size:30px;
+}
+
+.about-header p{
+    font-size:18px;
+    margin-top:15px;
+}
+
+.container{
+    max-width:1000px;
+    margin:40px auto;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    margin-bottom:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card h2{
+    color:#2a5298;
+    margin-top:0;
+    font-size:28px;
+}
+
+.card p{
+    font-size:17px;
+    line-height:1.7;
+    color:#333;
+}
+
+.card ul{
+    margin-top:10px;
+    padding-left:20px;
+}
+
+.card li{
+    margin-bottom:8px;
+    font-size:16px;
+}
+
+.quote{
+    text-align:center;
+    font-size:22px;
+    font-style:italic;
+    color:#1e3c72;
+    margin:40px 0;
+    font-weight:bold;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-bottom:20px;
+    padding:8px 15px;
+    background:#1f4037;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+.back-btn:hover{
+    background:#14532d;
+}
+
+footer{
+  background:#078095;
+  width:100%;
+  color:#fff;
+  margin-top:40px;
+}
+
+footer .content{
+  max-width:1250px;
+  margin:auto;
+  padding:5px;
+}
+
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:10px;
+  flex-wrap:wrap;
+}
+
+.logo-details{
+  font-size:28px;
+  font-weight:500;
+}
+
+.media-icons a{
+  height:40px;
+  width:40px;
+  margin:10px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.2);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  transition:0.3s;
+}
+
+.media-icons a:hover{
+  background:#fff;
+  color:#078095;
+}
+.link-boxes{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+.box{
+  width:auto;               
+}
+
+.box .link_name{
+  display:none;             
+}
+
+.box{
+  display:flex;
+  gap:30px;                
+}
+
+.box li{
+  list-style:none;
+}
+.box li a{
+  color:#fff;
+  text-decoration:none;
+  opacity:0.8;
+  transition:0.3s;
+}
+
+.box li a:hover{
+  opacity:1;
+  text-decoration:underline;
+}
+
+.input-box input{
+  height:40px;
+  width:100%;
+  margin:5px 0;
+  border-radius:4px;
+  border:none;
+  padding:0 10px;
+}
+
+.input-box input[type="button"]{
+  background:#fff;
+  color:#078095;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.bottom-details{
+  background:#067282;
+  padding:15px 40px;
+}
+
+.bottom_text{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  font-size:14px;
+}
+
+.bottom_text a{
+  color:#fff;
+  margin-left:10px;
+  text-decoration:none;
+}
+
+.bottom_text a:hover{
+  text-decoration:underline;
+}
+
+@media (max-width:768px){
+  .top{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .link-boxes{
+    flex-direction:column;
+  }
+
+  .box{
+    width:100%;
+    margin-bottom:20px;
+  }
+
+  .bottom_text{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+</style>
+</head>
+
+<body>
+<a href="index.html" class="home-link">
+<div class="header">
+    <img src="image/logo.jpeg" alt="ProjectBuddy Logo">
+        <div class="text">
+        <h1>ProjectBuddy</h1>
+        <p>Student Collaboration Hub</p>
+    </div>
+</div>
+</a>
+
+<div class="about-header">
+    <h1>About Science Projects Hub</h1>
+    <p>Inspiring Curiosity, Creativity & Innovation Through Practical Science Learning</p>
+</div>
+
+<div class="container">
+
+<a href="index.html" class="back-btn">Home</a>
+
+ <div class="card">
+        <p>
+        Welcome to Science Projects Hub, a platform dedicated to inspiring curiosity, creativity, and innovation among students through practical science learning.
+        </p>
+        <p>
+        We believe that science is not just a subject in textbooks — it is a way of understanding the world around us. Our mission is to make scientific concepts simple, clear, and engaging by providing well-structured project ideas and working models for school students from 5th to 10th standard.
+        </p>
+    </div>
+
+<div class="card">
+        <h2> Our Vision</h2>
+        <p>
+        Our vision is to create a learning environment where students develop a scientific attitude, critical thinking skills, and problem-solving abilities. We aim to bridge the gap between theoretical knowledge and real-life application by encouraging hands-on experiments and model-making activities.
+        </p>
+    </div>
+
+<div class="card">
+<h2>Our Mission</h2>
+<ul>
+<li>Provide easy-to-understand project content</li>
+<li>Promote practical learning</li>
+<li>Encourage creativity and innovation</li>
+<li>Support school project presentations</li>
+</ul>
+</div>
+ <div class="card">
+        <h2> What We Offer</h2>
+        <ul>
+            <li><strong> Detailed Project Explanation</strong> – Clear concept and scientific principles.</li>
+            <li><strong> Materials Required</strong> – Simple and affordable materials list.</li>
+            <li><strong> Step-by-Step Procedure</strong> – Easy instructions for building models.</li>
+            <li><strong> Diagrams & Working Models</strong> – Visual explanations for better understanding.</li>
+            <li><strong> Ready Project Reports</strong> – Aim, Materials, Procedure, Observations, Result, Conclusion & Applications.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2> Our Approach</h2>
+        <p>We focus on learning by doing. Instead of memorizing theory, students understand scientific concepts by performing experiments such as:</p>
+        <ul>
+            <li>Water Level Indicator with Alarm</li>
+            <li>Rainwater Harvesting Model</li>
+            <li>Solar Oven using Cardboard</li>
+            <li>Earthquake-Resistant Building Model</li>
+            <li>Smart Waste Segregation System</li>
+        </ul>
+        <p>These projects help students relate science to daily life and real-world problems.</p>
+    </div>
+
+    <div class="card">
+        <h2> Why Choose Us?</h2>
+        <ul>
+            <li>Simple and student-friendly language</li>
+            <li>Projects suitable for different grade levels</li>
+            <li>Practical and innovative ideas</li>
+            <li>Step-by-step guidance</li>
+            <li>Focus on concept clarity</li>
+        </ul>
+        <p>We are committed to helping students build confidence, improve presentation skills, and develop a strong foundation in science.</p>
+    </div>
+
+    <div class="quote">
+        “Science becomes meaningful when students experiment, explore, and experience it themselves.”
+    </div>
+
+</div>
+
+<footer>
+  <div class="content">
+
+    <div class="top">
+      <div class="logo-details">
+         <span class="logo_name">ProjectBuddy</span>
+      </div>
+
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="link-boxes">
+
+      <ul class="box">
+        <li class="link_name">Website</li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="signin.html">Login</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="admin.html">Admin</a></li>
+
+        <li class="link_name">Account</li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="bottom-details">
+    <div class="bottom_text">
+      <span>
+        Copyright © 2026 ProjectBuddy. All rights reserved
+      </span>
+      <span>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </span>
+    </div>
+  </div>
+
+</footer>
+</body>
+</html>

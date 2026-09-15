@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Natural Indicator - Project Buddy</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+}
+
+
+.header{
+    display:flex;
+background:#7db3bd;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    padding-top:40px;
+}
+
+
+.header img{
+    width:120px;
+    height:120px;
+    border-radius:150%;
+    object-fit:contain;
+}
+.text h1{
+    margin:0;
+    font-size:45px;
+    font-weight:800;
+    letter-spacing:1px;
+    color:#1e2a38;
+}
+
+.text p{
+    margin:5px 0 0;
+    font-size:20px;
+    text-align: center;
+    color:#1e2a38;
+
+}
+.home-link{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+
+
+.topic-header{
+    background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+    padding:40px 20px;
+    text-align:center;
+    color:#1e2a38;
+}
+
+.header h1{
+    margin:0;
+    font-size:36px;
+}
+
+
+.container{
+    max-width:1000px;
+    margin:40px auto;
+    padding:20px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+
+.project-img{
+    width:50%;
+    border-radius:10px;
+margin:0 auto 25px auto;
+    display:block;}
+
+
+h2{
+    color:#764ba2;
+    margin-top:25px;
+}
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:8px;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-bottom:20px;
+    padding:8px 15px;
+    background:#1f4037;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+.back-btn:hover{
+    background:#14532d;
+}
+
+footer{
+  background:#078095;
+  width:100%;
+  color:#fff;
+  margin-top:40px;
+}
+
+footer .content{
+  max-width:1250px;
+  margin:auto;
+  padding:5px;
+}
+
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:10px;
+  flex-wrap:wrap;
+}
+
+.logo-details{
+  font-size:28px;
+  font-weight:500;
+}
+
+.media-icons a{
+  height:40px;
+  width:40px;
+  margin:10px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.2);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  transition:0.3s;
+}
+
+.media-icons a:hover{
+  background:#fff;
+  color:#078095;
+}
+.link-boxes{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+.box{
+  width:auto;               
+
+}
+
+.box .link_name{
+  display:none;             
+}
+
+.box{
+  display:flex;
+  gap:30px;                
+}
+
+.box li{
+  list-style:none;
+}
+.box li a{
+  color:#fff;
+  text-decoration:none;
+  opacity:0.8;
+  transition:0.3s;
+}
+
+.box li a:hover{
+  opacity:1;
+  text-decoration:underline;
+}
+
+.input-box input{
+  height:40px;
+  width:100%;
+  margin:5px 0;
+  border-radius:4px;
+  border:none;
+  padding:0 10px;
+}
+
+.input-box input[type="button"]{
+  background:#fff;
+  color:#078095;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.bottom-details{
+  background:#067282;
+  padding:15px 40px;
+}
+
+.bottom_text{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  font-size:14px;
+}
+
+.bottom_text a{
+  color:#fff;
+  margin-left:10px;
+  text-decoration:none;
+}
+
+.bottom_text a:hover{
+  text-decoration:underline;
+}
+
+/* Responsive */
+@media (max-width:768px){
+  .top{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .link-boxes{
+    flex-direction:column;
+  }
+
+  .box{
+    width:100%;
+    margin-bottom:20px;
+  }
+
+  .bottom_text{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+
+</style>
+</head>
+<body>
+<a href="index.html" class="home-link">
+<div class="header">
+    <img src="image/logo.jpeg" alt="ProjectBuddy Logo">
+        <div class="text">
+        <h1>ProjectBuddy</h1>
+        <p>Student Collaboration Hub</p>
+    </div>
+</div>
+</a>
+
+<div class="topic-header">
+    <h1>Natural Indicator – Science Project</h1>
+</div>
+
+<div class="container">
+
+<a href="5projects.html" class="back-btn">Back</a>
+
+<img src="image/natural indicator.png"
+     alt="Natural Indicator Science Project" 
+     class="project-img">
+
+<h2>Introduction</h2>
+<p>
+In our daily life we use many substances like lemon juice, soap, baking soda, and vinegar. 
+Some of them are acids and some are bases. To identify whether a substance is acidic or basic, 
+scientists use substances called <b>indicators</b>.
+</p>
+
+<p>
+An indicator is a substance that changes its color when added to an acid or a base. 
+Instead of chemical indicators, we can also use natural materials such as <b>turmeric</b> 
+and <b>China rose (hibiscus) petals</b>. These substances are known as natural indicators.
+</p>
+
+<h2>Aim of the Project</h2>
+<p>
+To study how natural substances like turmeric and China rose petals can be used to identify acids and bases.
+</p>
+
+<h2>Materials Required</h2>
+<ul>
+<li>Turmeric powder</li>
+<li>China rose (Hibiscus) petals</li>
+<li>Warm water</li>
+<li>4 small cups</li>
+<li>Lemon juice</li>
+<li>Vinegar</li>
+<li>Baking soda solution</li>
+<li>Soap solution</li>
+<li>Spoon</li>
+<li>White paper (for turmeric test)</li>
+</ul>
+
+<h2>Step-by-Step Procedure</h2>
+
+<h3>A) Turmeric Indicator Test</h3>
+<ol>
+<li>Mix turmeric powder with a little water to make a paste.</li>
+<li>Apply the paste on white paper and let it dry.</li>
+<li>Cut the paper into small strips.</li>
+<li>Put a few drops of lemon juice on one strip.</li>
+<li>Put a few drops of soap solution on another strip.</li>
+<li>Observe the color change.</li>
+</ol>
+
+<h3>B) China Rose Indicator Test</h3>
+<ol>
+<li>Take some China rose petals.</li>
+<li>Crush them in warm water.</li>
+<li>Filter the liquid into a cup.</li>
+<li>Add a few drops of lemon juice, vinegar, baking soda solution, and soap solution in separate cups.</li>
+<li>Observe the color changes.</li>
+</ol>
+
+<h2>Observation</h2>
+
+<h3>Turmeric Indicator</h3>
+<ul>
+<li>No color change with acids.</li>
+<li>Turns red or reddish-brown with bases.</li>
+</ul>
+
+<h3>China Rose Indicator</h3>
+<ul>
+<li>Turns dark pink or red in acids.</li>
+<li>Turns green in bases.</li>
+</ul>
+
+<h2>Result</h2>
+<p>
+Different substances cause different color changes in natural indicators, helping us identify acids and bases.
+</p>
+
+<h2>Conclusion</h2>
+<p>
+Natural substances like turmeric and China rose petals can be used as indicators to identify acids and bases. 
+These indicators are safe, eco-friendly, and easily available, making them a simple and inexpensive option 
+for science experiments.
+</p>
+
+</div>
+
+<footer>
+  <div class="content">
+
+    <div class="top">
+      <div class="logo-details">
+         <span class="logo_name">ProjectBuddy</span>
+      </div>
+
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="link-boxes">
+
+    <ul class="box">
+        <li class="link_name">Website</li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="signin.html">Login</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="admin.html">Admin</a></li>
+
+        <li class="link_name">Account</li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+
+    
+    </div>
+  </div>
+
+  <div class="bottom-details">
+    <div class="bottom_text">
+      <span>
+        Copyright © 2026 ProjectBuddy. All rights reserved
+      </span>
+      <span>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ - Student Project Hub</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+}
+
+.header{
+    display:flex;
+background:#7db3bd;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    padding-top:40px;
+}
+
+.header img{
+    width:120px;
+    height:120px;
+    border-radius:150%;
+    object-fit:contain;
+}
+
+.text h1{
+    margin:0;
+    font-size:45px;
+    font-weight:800;
+    letter-spacing:1px;
+    color:#1e2a38;
+}
+
+.text p{
+    margin:5px 0 0;
+    font-size:20px;
+    text-align: center;
+    color:#1e2a38;
+}
+
+.home-link{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.page-title{
+    text-align:center;
+    padding:40px 20px 20px;
+    color:black;
+}
+
+.page-title h1{
+    font-size:30px;
+    margin:0;
+}
+
+.page-title p{
+    font-size:18px;
+    margin-top:10px;
+}
+
+.faq-container{
+    max-width:1000px;
+    margin:30px auto 60px;
+    padding:20px;
+}
+
+.faq-item{
+    background:white;
+    padding:20px 25px;
+    margin-bottom:20px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    transition:0.3s ease;
+}
+
+.faq-item:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+.faq-item h3{
+    margin:0;
+    font-size:20px;
+    color:#4a00e0;
+}
+
+.faq-item p{
+    margin-top:10px;
+    font-size:16px;
+    line-height:1.6;
+    color:#333;
+}
+
+.faq-item ul{
+    margin-top:8px;
+    padding-left:20px;
+}
+
+.faq-item li{
+    margin-bottom:5px;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-bottom:20px;
+    padding:8px 15px;
+    background:#1f4037;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+.back-btn:hover{
+    background:#14532d;
+}
+
+footer{
+  background:#078095;
+  width:100%;
+  color:#fff;
+  margin-top:40px;
+}
+
+footer .content{
+  max-width:1250px;
+  margin:auto;
+  padding:5px;
+}
+
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:10px;
+  flex-wrap:wrap;
+}
+
+.logo-details{
+  font-size:28px;
+  font-weight:500;
+}
+
+.media-icons a{
+  height:40px;
+  width:40px;
+  margin:10px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.2);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  transition:0.3s;
+}
+
+.media-icons a:hover{
+  background:#fff;
+  color:#078095;
+}
+
+.link-boxes{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+.box{
+  width:auto;               
+}
+
+.box .link_name{
+  display:none;             
+}
+
+.box{
+  display:flex;
+  gap:30px;                
+}
+
+.box li{
+  list-style:none;
+}
+
+.box li a{
+  color:#fff;
+  text-decoration:none;
+  opacity:0.8;
+  transition:0.3s;
+}
+
+.box li a:hover{
+  opacity:1;
+  text-decoration:underline;
+}
+
+.input-box input{
+  height:40px;
+  width:100%;
+  margin:5px 0;
+  border-radius:4px;
+  border:none;
+  padding:0 10px;
+}
+
+.input-box input[type="button"]{
+  background:#fff;
+  color:#078095;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.bottom-details{
+  background:#067282;
+  padding:15px 40px;
+}
+
+.bottom_text{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  font-size:14px;
+}
+
+.bottom_text a{
+  color:#fff;
+  margin-left:10px;
+  text-decoration:none;
+}
+
+.bottom_text a:hover{
+  text-decoration:underline;
+}
+
+@media (max-width:768px){
+  .top{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .link-boxes{
+    flex-direction:column;
+  }
+
+  .box{
+    width:100%;
+    margin-bottom:20px;
+  }
+
+  .bottom_text{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<a href="index.html" class="home-link">
+<div class="header">
+    <img src="image/logo.jpeg" alt="ProjectBuddy Logo">
+        <div class="text">
+        <h1>ProjectBuddy</h1>
+        <p>Student Collaboration Hub</p>
+    </div>
+</div>
+</a>
+
+<div class="page-title">
+    <h1> Frequently Asked Questions (FAQ)</h1>
+    <p>Your questions about Student Project Hub answered here</p>
+</div>
+
+<div class="faq-container">
+<a href="index.html" class="back-btn">Home</a>
+
+    <div class="faq-item">
+        <h3>1) What is Student Project Hub?</h3>
+        <p>Student Project Hub is an educational website that provides Science and EVS project ideas for students from Class 5 to Class 10.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>2) Who can use this website?</h3>
+        <p>Students from Class 5 to 10, teachers, and parents can use this website for project ideas and guidance.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>3) What subjects are covered?</h3>
+        <ul>
+            <li>Science</li>
+            <li>Environmental Studies (EVS)</li>
+        </ul>
+    </div>
+
+    <div class="faq-item">
+        <h3>4) Are the projects syllabus-based?</h3>
+        <p>Yes, all projects are designed according to school syllabus concepts and are suitable for academic submissions.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>5) Does the website provide project material list?</h3>
+        <ul>
+            <li>Aim</li>
+            <li>Materials Required</li>
+            <li>Procedure</li>
+            <li>Working Explanation</li>
+            <li>Conclusion</li>
+        </ul>
+    </div>
+
+    <div class="faq-item">
+        <h3>6) Are these projects easy to make at home?</h3>
+        <p>Yes, most projects use simple and easily available materials that students can find at home.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>7) Is this website free to use?</h3>
+        <p>Yes, students can explore project ideas and basic content for free.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>8) Can teachers use these projects for classroom demonstrations?</h3>
+        <p>Yes, teachers can use the project ideas for classroom teaching and exhibitions.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>9) Do you provide step-by-step guidance?</h3>
+        <p>Yes, every project includes clear step-by-step instructions for better understanding.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>10) Can students submit their own projects?</h3>
+        <p>Yes, students can share their innovative project ideas through the submission section.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>11) How do I choose a project?</h3>
+        <p>You can select your class (5th–10th) and then choose from Science or EVS project categories.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>12) Are working models included?</h3>
+        <ul>
+            <li>Hydraulic Arm</li>
+            <li>Rain Alarm</li>
+            <li>Electric Circuits</li>
+            <li>Water Filtration System</li>
+        </ul>
+    </div>
+
+    <div class="faq-item">
+        <h3>13) Can I download project content?</h3>
+        <p>Some resources may be available for download in PDF or document format.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>14) Does this website help in science exhibitions?</h3>
+        <p>Yes, the projects are suitable for school exhibitions and science fairs.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>15) Is registration required?</h3>
+        <p>Registration is optional, but creating an account helps you save projects and access extra features.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>16) How can I contact support?</h3>
+        <p>You can contact us through the Contact Us page for any help or guidance related to projects.</p>
+    </div>
+
+</div>
+
+<footer>
+  <div class="content">
+
+    <div class="top">
+      <div class="logo-details">
+         <span class="logo_name">ProjectBuddy</span>
+      </div>
+
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="link-boxes">
+
+     <ul class="box">
+        <li class="link_name">Website</li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="signin.html">Login</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="admin.html">Admin</a></li>
+
+        <li class="link_name">Account</li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="bottom-details">
+    <div class="bottom_text">
+      <span>
+        Copyright © 2026 ProjectBuddy. All rights reserved
+      </span>
+      <span>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </span>
+    </div>
+  </div>
+
+</footer>
+</body>
+</html>

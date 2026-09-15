@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Urban Heat Island Effect- Project Buddy</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+}
+
+
+.header{
+    display:flex;
+background:#7db3bd;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    padding-top:40px;
+}
+
+
+.header img{
+    width:120px;
+    height:120px;
+    border-radius:150%;
+    object-fit:contain;
+}
+
+.text h1{
+    margin:0;
+    font-size:45px;
+    font-weight:800;
+    letter-spacing:1px;
+    color:#1e2a38;
+}
+
+.text p{
+    margin:5px 0 0;
+    font-size:20px;
+    text-align: center;
+    color:#1e2a38;
+
+}
+.home-link{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+
+
+.topic-header{
+    background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+    padding:40px 20px;
+    text-align:center;
+    color:#1e2a38;
+}
+
+.header h1{
+    margin:0;
+    font-size:36px;
+}
+
+
+.container{
+    max-width:1000px;
+    margin:40px auto;
+    padding:20px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+
+.project-img{
+    width:50%;
+    border-radius:10px;
+margin:0 auto 25px auto;
+    display:block;}
+
+
+h2{
+    color:#764ba2;
+    margin-top:25px;
+}
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:8px;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-bottom:20px;
+    padding:8px 15px;
+    background:#1f4037;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+.back-btn:hover{
+    background:#14532d;
+}
+
+footer{
+  background:#078095;
+  width:100%;
+  color:#fff;
+  margin-top:40px;
+}
+
+footer .content{
+  max-width:1250px;
+  margin:auto;
+  padding:5px;
+}
+
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:10px;
+  flex-wrap:wrap;
+}
+
+.logo-details{
+  font-size:28px;
+  font-weight:500;
+}
+
+.media-icons a{
+  height:40px;
+  width:40px;
+  margin:10px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.2);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  transition:0.3s;
+}
+
+.media-icons a:hover{
+  background:#fff;
+  color:#078095;
+}
+.link-boxes{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+.box{
+  width:auto;               
+
+}
+
+.box .link_name{
+  display:none;             
+}
+
+.box{
+  display:flex;
+  gap:30px;                
+}
+
+.box li{
+  list-style:none;
+}
+.box li a{
+  color:#fff;
+  text-decoration:none;
+  opacity:0.8;
+  transition:0.3s;
+}
+
+.box li a:hover{
+  opacity:1;
+  text-decoration:underline;
+}
+
+.input-box input{
+  height:40px;
+  width:100%;
+  margin:5px 0;
+  border-radius:4px;
+  border:none;
+  padding:0 10px;
+}
+
+.input-box input[type="button"]{
+  background:#fff;
+  color:#078095;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.bottom-details{
+  background:#067282;
+  padding:15px 40px;
+}
+
+.bottom_text{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  font-size:14px;
+}
+
+.bottom_text a{
+  color:#fff;
+  margin-left:10px;
+  text-decoration:none;
+}
+
+.bottom_text a:hover{
+  text-decoration:underline;
+}
+
+
+@media (max-width:768px){
+  .top{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .link-boxes{
+    flex-direction:column;
+  }
+
+  .box{
+    width:100%;
+    margin-bottom:20px;
+  }
+
+  .bottom_text{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+
+</style>
+</head>
+<body>
+<a href="index.html" class="home-link">
+<div class="header">
+    <img src="image/logo.jpeg" alt="ProjectBuddy Logo">
+        <div class="text">
+        <h1>ProjectBuddy</h1>
+        <p>Student Collaboration Hub</p>
+    </div>
+</div>
+</a>
+
+<div class="topic-header">
+    <h1>Urban Heat Island Effect</h1>
+</div>
+
+<div class="container">
+
+<a href="7projects.html" class="back-btn">Back</a>
+
+<img src="image/urban-heat-island-model.png"
+     alt="Urban Heat Island Effect Model" 
+     class="project-img">
+
+<h2>Introduction</h2>
+<p>
+The Urban Heat Island Effect happens when cities become hotter than nearby rural areas. 
+This occurs because buildings, concrete roads, vehicles, and pollution absorb and trap heat.
+</p>
+
+<p>
+In contrast, villages and green areas have trees, soil, and water bodies which help keep the temperature cooler. 
+Urbanization reduces natural vegetation and increases surfaces that store heat.
+</p>
+
+<p>
+This project helps students understand how cities become warmer than villages and how green spaces help reduce temperature.
+</p>
+
+<h2>Objective</h2>
+<ul>
+<li>To demonstrate why cities are hotter than villages.</li>
+<li>To understand the concept of the Urban Heat Island Effect.</li>
+<li>To study the role of trees and green spaces in reducing temperature.</li>
+<li>To create awareness about sustainable urban development.</li>
+</ul>
+
+<h2>Concepts Used</h2>
+<ul>
+<li>Urban Heat Island Effect</li>
+<li>Urbanization and Climate</li>
+<li>Heat Absorption by Concrete</li>
+<li>Role of Trees and Green Spaces</li>
+<li>Environmental Sustainability</li>
+</ul>
+
+<h2>Materials Required</h2>
+<ul>
+<li>Cardboard or thermocol base</li>
+<li>Small cardboard boxes (for buildings)</li>
+<li>Black chart paper (for roads)</li>
+<li>Green chart paper or artificial grass</li>
+<li>Small plant models or paper trees</li>
+<li>Toy cars (optional)</li>
+<li>Glue or Fevicol</li>
+<li>Scissors</li>
+<li>Cotton (for clouds)</li>
+<li>Sketch pens or markers</li>
+<li>Labels for city and village areas</li>
+</ul>
+
+<h2>Steps to Make the Model</h2>
+<ol>
+<li>Prepare the base using a cardboard sheet and divide it into two parts: city area and village area.</li>
+<li>Create the city area using cardboard boxes as buildings and black chart paper as roads. Add toy cars and very few trees.</li>
+<li>Create the village or green area using green paper to represent grass and add many trees and plants. Draw or place a small pond or river.</li>
+<li>Show the heat effect by drawing sun rays. On the city side draw red heat waves, while on the village side show cool shade under trees.</li>
+<li>Add labels such as “City Area – High Temperature”, “Village Area – Low Temperature”, and “Trees Reduce Heat”.</li>
+</ol>
+
+<h2>How It Works</h2>
+<p>
+Concrete, asphalt roads, and buildings absorb sunlight during the day and store heat. At night they slowly release this heat, making cities warmer than nearby rural areas.
+</p>
+
+<ul>
+<li>Urban areas have more buildings and less greenery.</li>
+<li>Concrete surfaces trap heat and increase temperature.</li>
+<li>Trees provide shade and cool the air through evaporation.</li>
+<li>Green spaces help reduce the Urban Heat Island Effect.</li>
+</ul>
+
+<h2>Expected Result</h2>
+<ul>
+<li>The model clearly shows the temperature difference between city and village areas.</li>
+<li>Students understand how buildings and roads increase heat.</li>
+<li>The project highlights the importance of trees and green spaces in cities.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+The Urban Heat Island Effect shows how rapid urbanization can increase temperatures in cities. 
+Concrete buildings and roads absorb and store heat, making urban areas warmer than rural areas.
+</p>
+
+<p>
+Increasing green spaces, planting more trees, and using eco-friendly building materials can help reduce heat and make cities healthier places to live.
+</p>
+
+</div>
+
+
+
+<footer>
+  <div class="content">
+
+    <div class="top">
+      <div class="logo-details">
+         <span class="logo_name">ProjectBuddy</span>
+      </div>
+
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="link-boxes">
+
+    <ul class="box">
+        <li class="link_name">Website</li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="signin.html">Login</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="admin.html">Admin</a></li>
+
+        <li class="link_name">Account</li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+
+    
+    </div>
+  </div>
+
+  <div class="bottom-details">
+    <div class="bottom_text">
+      <span>
+        Copyright © 2026 ProjectBuddy. All rights reserved
+      </span>
+      <span>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

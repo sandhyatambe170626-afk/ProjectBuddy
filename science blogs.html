@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Science Blogs - ProjectBuddy</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+}
+
+.header{
+    display:flex;
+background:#7db3bd;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    padding-top:40px;
+}
+
+.header img{
+    width:120px;
+    height:120px;
+    border-radius:150%;
+    object-fit:contain;
+}
+.text h1{
+    margin:0;
+    font-size:45px;
+    font-weight:800;
+    letter-spacing:1px;
+    color:#1e2a38;
+}
+
+.text p{
+    margin:5px 0 0;
+    font-size:20px;
+    text-align: center;
+    color:#1e2a38;
+
+}
+.home-link{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.blog-header{
+    background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+    text-align:center;
+    padding:50px 20px;
+}
+
+.header h1{
+    margin:0;
+    font-size:40px;
+    color:#1e2a38;
+}
+
+.header p{
+    font-size:18px;
+    margin-top:10px;
+}
+
+.container{
+    max-width:1100px;
+    margin:40px auto;
+    padding:20px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+    text-align:center;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card a{
+    text-decoration:none;
+    color:#764ba2;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.card i{
+    font-size:35px;
+    margin-bottom:10px;
+    color:#078095;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-bottom:20px;
+    padding:8px 15px;
+    background:#1f4037;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+.back-btn:hover{
+    background:#14532d;
+}
+
+footer{
+  background:#078095;
+  width:100%;
+  color:#fff;
+  margin-top:40px;
+}
+
+footer .content{
+  max-width:1250px;
+  margin:auto;
+  padding:5px;
+}
+
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:10px;
+  flex-wrap:wrap;
+}
+
+.logo-details{
+  font-size:28px;
+  font-weight:500;
+}
+
+.media-icons a{
+  height:40px;
+  width:40px;
+  margin:10px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.2);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  transition:0.3s;
+}
+
+.media-icons a:hover{
+  background:#fff;
+  color:#078095;
+}
+.link-boxes{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+.box{
+  width:auto;               
+
+}
+
+.box .link_name{
+  display:none;             
+}
+
+.box{
+  display:flex;
+  gap:30px;                
+}
+
+.box li{
+  list-style:none;
+}
+.box li a{
+  color:#fff;
+  text-decoration:none;
+  opacity:0.8;
+  transition:0.3s;
+}
+
+.box li a:hover{
+  opacity:1;
+  text-decoration:underline;
+}
+
+.input-box input{
+  height:40px;
+  width:100%;
+  margin:5px 0;
+  border-radius:4px;
+  border:none;
+  padding:0 10px;
+}
+
+.input-box input[type="button"]{
+  background:#fff;
+  color:#078095;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.bottom-details{
+  background:#067282;
+  padding:15px 40px;
+}
+
+.bottom_text{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  font-size:14px;
+}
+
+.bottom_text a{
+  color:#fff;
+  margin-left:10px;
+  text-decoration:none;
+}
+
+.bottom_text a:hover{
+  text-decoration:underline;
+}
+
+@media (max-width:768px){
+  .top{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .link-boxes{
+    flex-direction:column;
+  }
+
+  .box{
+    width:100%;
+    margin-bottom:20px;
+  }
+
+  .bottom_text{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<a href="index.html" class="home-link">
+<div class="header">
+    <img src="image/logo.jpeg" alt="ProjectBuddy Logo">
+        <div class="text">
+        <h1>ProjectBuddy</h1>
+        <p>Student Collaboration Hub</p>
+    </div>
+</div>
+</a>
+
+<div class="blog-header">
+    <h1>Science Blogs</h1>
+    <p>Click any project to open full blog content</p>
+</div>
+
+<div class="container">
+
+<a href="blog.html" class="back-btn">Back</a>
+
+<div class="grid">
+
+<div class="card">
+<a href="https://studentprojecthub.blogspot.com/2026/02/air-pollution-detector-model.html" target="_blank">
+Air Pollution Detector Model
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthub.blogspot.com/2026/02/automatic-plant-watering-system.html" target="_blank">
+Automatic Plant Watering System
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthub.blogspot.com/2026/02/smart-rain-alarm-system.html" target="_blank">
+Smart Rain Alarm System
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthub.blogspot.com/2026/02/water-level-indicator-with-alarm.html" target="_blank">
+Water Level Indicator with Alarm
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthub.blogspot.com/2026/02/windmill-power-generator-model.html" target="_blank">
+Windmill Power Generator Model
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthub.blogspot.com/2026/02/working-model-of-hydraulic-lift.html" target="_blank">
+Working Model of Hydraulic Lift
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthub.blogspot.com/2026/02/working-model-of-waste-segregation.html" target="_blank">
+Waste Segregation Model
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthub.blogspot.com/2026/02/study-of-electroplating-on-different.html" target="_blank">
+Study of Electroplating
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthub.blogspot.com/2026/02/solar-tracking-system.html" target="_blank">
+Solar Tracking System
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthub.blogspot.com/2026/02/smart-automatic-fire-detection.html" target="_blank">
+Automatic Fire Detection
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthub.blogspot.com/2026/02/comparative-study-of-natural-vs.html" target="_blank">
+Natural vs Chemical Fertilizers
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthub.blogspot.com/2026/02/biogas-plant-working-model.html" target="_blank">
+Biogas Plant Model
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthub.blogspot.com/2026/02/working-model-of-automatic-railway-gate.html" target="_blank">
+Automatic Railway Gate
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthub.blogspot.com/2026/02/working-model-of-solar.html" target="_blank">
+Solar Working Model
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthub.blogspot.com/2026/02/study-of-factors-affecting-rusting-of.html" target="_blank">
+Study of Rusting
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthub.blogspot.com/2026/02/smart-irrigation-system.html" target="_blank">
+Smart Irrigation System
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthub.blogspot.com/2026/02/hydraulic-robotic-arm.html" target="_blank">
+Hydraulic Robotic Arm
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthub.blogspot.com/2026/02/generation-of-electricity-using-salt.html" target="_blank">
+Electricity Using Salt Water
+</a>
+</div>
+
+<div class="card">
+<a href="https://studentprojecthub.blogspot.com/2026/02/biodegradable-plastic-from-milk.html" target="_blank">
+Biodegradable Plastic from Milk
+</a>
+</div>
+
+<div class="card">
+<a href="https://scieneceproject.blogspot.com/2026/03/seed-germination-in-different-ways.html">
+Seed Germination In Different Ways
+</a>
+</div>
+
+<div class="card">
+<a href="https://scieneceproject.blogspot.com/2026/03/hydraulic-lift-and-hydraulic-bridge.html">
+Hydraulic Lift And Hydraulic Bridge
+</a>
+</div>
+
+<div class="card">
+<a href="https://scieneceproject.blogspot.com/2026/03/natural-indicators-natures-own-ph.html">
+Natural Indicators – Nature's Own pH
+</a>
+</div>
+
+<div class="card">
+<a href="https://scieneceproject.blogspot.com/2026/02/solar-oven-using-cardboard-eco-friendly.html">
+Solar Oven Using Cardboard – Eco Friendly
+</a>
+</div>
+
+<div class="card">
+<a href="https://7thstdscience.blogspot.com/2026/03/earthquake-resistant-building-model.html">
+Earthquake Resistant Building Model
+</a>
+</div>
+
+<div class="card">
+<a href="https://7thstdscience.blogspot.com/2026/03/greywater-recycling-system.html">
+Greywater Recycling System
+</a>
+</div>
+
+<div class="card">
+<a href="https://scienceproject6th.blogspot.com/2026/03/smart-plant-watering-system-model.html">
+Smart Plant Watering System Model
+</a>
+</div>
+
+<div class="card">
+<a href="https://scienceproject6th.blogspot.com/2026/03/solar-powered-house-model-sustainable.html">
+Solar Powered House Model – Sustainable Energy
+</a>
+</div>
+
+<div class="card">
+<a href="https://scienceproject6th.blogspot.com/2026/03/working-model-of-rainwater-harvesting.html">
+Working Model Of Rainwater Harvesting
+</a>
+</div>
+
+</div>
+</div>
+
+<footer>
+  <div class="content">
+
+    <div class="top">
+      <div class="logo-details">
+         <span class="logo_name">ProjectBuddy</span>
+      </div>
+
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="link-boxes">
+
+      <ul class="box">
+        <li class="link_name">Website</li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="signin.html">Login</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="admin.html">Admin</a></li>
+
+        <li class="link_name">Account</li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+
+    
+    </div>
+  </div>
+
+  <div class="bottom-details">
+    <div class="bottom_text">
+      <span>
+        Copyright © 2026 ProjectBuddy. All rights reserved
+      </span>
+      <span>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

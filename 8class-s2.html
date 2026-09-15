@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automatic Plant Watering System - ProjectBuddy</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+}
+
+ 
+.header{
+    display:flex;
+background:#7db3bd;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    padding-top:40px;
+}
+
+
+.header img{
+    width:120px;
+    height:120px;
+    border-radius:150%;
+    object-fit:contain;
+}
+
+.text h1{
+    margin:0;
+    font-size:45px;
+    font-weight:800;
+    letter-spacing:1px;
+    color:#1e2a38;
+}
+
+.text p{
+    margin:5px 0 0;
+    font-size:20px;
+    text-align: center;
+    color:#1e2a38;
+
+}
+.home-link{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+
+
+.topic-header{
+    background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+    padding:40px 20px;
+    text-align:center;
+    color:#1e2a38;
+}
+
+.header h1{
+    margin:0;
+    font-size:36px;
+}
+
+
+.container{
+    max-width:1000px;
+    margin:40px auto;
+    padding:20px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+
+.project-img{
+    width:50%;
+    border-radius:10px;
+margin:0 auto 25px auto;
+    display:block;}
+
+
+h2{
+    color:#764ba2;
+    margin-top:25px;
+}
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:8px;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-bottom:20px;
+    padding:8px 15px;
+    background:#1f4037;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+.back-btn:hover{
+    background:#14532d;
+}
+
+footer{
+  background:#078095;
+  width:100%;
+  color:#fff;
+  margin-top:40px;
+}
+
+footer .content{
+  max-width:1250px;
+  margin:auto;
+  padding:5px;
+}
+
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:10px;
+  flex-wrap:wrap;
+}
+
+.logo-details{
+  font-size:28px;
+  font-weight:500;
+}
+
+.media-icons a{
+  height:40px;
+  width:40px;
+  margin:10px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.2);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  transition:0.3s;
+}
+
+.media-icons a:hover{
+  background:#fff;
+  color:#078095;
+}
+.link-boxes{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+.box{
+  width:auto;               
+
+}
+
+.box .link_name{
+  display:none;             
+}
+
+.box{
+  display:flex;
+  gap:30px;                
+}
+
+.box li{
+  list-style:none;
+}
+.box li a{
+  color:#fff;
+  text-decoration:none;
+  opacity:0.8;
+  transition:0.3s;
+}
+
+.box li a:hover{
+  opacity:1;
+  text-decoration:underline;
+}
+
+.input-box input{
+  height:40px;
+  width:100%;
+  margin:5px 0;
+  border-radius:4px;
+  border:none;
+  padding:0 10px;
+}
+
+.input-box input[type="button"]{
+  background:#fff;
+  color:#078095;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.bottom-details{
+  background:#067282;
+  padding:15px 40px;
+}
+
+.bottom_text{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  font-size:14px;
+}
+
+.bottom_text a{
+  color:#fff;
+  margin-left:10px;
+  text-decoration:none;
+}
+
+.bottom_text a:hover{
+  text-decoration:underline;
+}
+
+
+@media (max-width:768px){
+  .top{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .link-boxes{
+    flex-direction:column;
+  }
+
+  .box{
+    width:100%;
+    margin-bottom:20px;
+  }
+
+  .bottom_text{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+
+</style>
+</head>
+<body>
+<a href="index.html" class="home-link">
+<div class="header">
+    <img src="image/logo.jpeg" alt="ProjectBuddy Logo">
+        <div class="text">
+        <h1>ProjectBuddy</h1>
+        <p>Student Collaboration Hub</p>
+    </div>
+</div>
+</a>
+
+<div class="topic-header">
+    <h1>Automatic Plant Watering System</h1>
+</div>
+
+
+<div class="container">
+
+<a href="8projects.html" class="back-btn">Back</a>
+
+<img src="image/automatic plant watering system.png"
+     alt="Automatic Plant Watering System"
+     class="project-img">
+
+<h2> Objective</h2>
+<ul>
+<li>To design a system that automatically waters plants when the soil moisture level becomes low.</li>
+</ul>
+
+<h2> Concepts Used</h2>
+<ul>
+<li>Soil Moisture</li>
+<li>Automation</li>
+<li>Sensors</li>
+<li>Arduino Programming</li>
+<li>Smart Irrigation</li>
+</ul>
+
+<h2> Need for the Project</h2>
+<ul>
+<li>Prevents overwatering and underwatering.</li>
+<li>Saves water.</li>
+<li>Useful for busy people and farmers.</li>
+<li>Supports smart gardening systems.</li>
+</ul>
+
+<h2> Materials Required</h2>
+<ul>
+<li>Soil Moisture Sensor</li>
+<li>Arduino UNO (or any microcontroller)</li>
+<li>Water Pump (5V/9V small DC pump)</li>
+<li>Relay Module</li>
+<li>Jumper Wires</li>
+<li>Breadboard</li>
+<li>Plastic Pipe</li>
+<li>Water Container</li>
+<li>Plant Pot with Soil</li>
+<li>Power Supply / Battery</li>
+</ul>
+
+<h2> Steps to Make the Model</h2>
+<ol>
+<li>Insert the soil moisture sensor into the soil.</li>
+<li>Connect VCC → 5V, GND → GND, and Signal → Arduino Analog Pin (A0).</li>
+<li>Connect the relay module input to Arduino Digital Pin (D7).</li>
+<li>Connect the relay module with the water pump.</li>
+<li>Attach a plastic pipe to the pump and place the pump in a water container.</li>
+<li>Upload Arduino code to monitor soil moisture level.</li>
+<li>Set a moisture threshold value in the program.</li>
+<li>Test the model by drying the soil.</li>
+</ol>
+
+<h2> How It Works</h2>
+<p>
+The soil moisture sensor continuously checks the moisture level of the soil.
+If the soil becomes dry, the sensor sends a signal to the Arduino UNO.
+</p>
+
+<ul>
+<li>Arduino activates the relay module.</li>
+<li>The relay turns ON the water pump.</li>
+<li>The pump supplies water to the plant through the pipe.</li>
+<li>When soil becomes wet again, the pump automatically turns OFF.</li>
+</ul>
+
+<p>
+This process works automatically without manual watering.
+</p>
+
+<h2> Expected Result</h2>
+<ul>
+<li>Plants receive water automatically when soil becomes dry.</li>
+<li>Water usage is reduced.</li>
+<li>No manual watering is required.</li>
+<li>Demonstrates a smart irrigation system.</li>
+</ul>
+
+<h2> Conclusion</h2>
+<p>
+The Automatic Plant Watering System helps students understand automation,
+soil moisture sensing, and smart irrigation technology. This project
+demonstrates how technology can help in efficient water management and
+smart gardening.
+</p>
+
+</div>
+
+
+<footer>
+  <div class="content">
+
+    <div class="top">
+      <div class="logo-details">
+         <span class="logo_name">ProjectBuddy</span>
+      </div>
+
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="link-boxes">
+
+     <ul class="box">
+        <li class="link_name">Website</li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="signin.html">Login</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="admin.html">Admin</a></li>
+
+        <li class="link_name">Account</li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+
+
+    
+    </div>
+  </div>
+
+  <div class="bottom-details">
+    <div class="bottom_text">
+      <span>
+        Copyright © 2026 ProjectBuddy. All rights reserved
+      </span>
+      <span>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hydraulic Robotic Arm - ProjectBuddy</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+}
+
+.header{
+    display:flex;
+background:#7db3bd;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    padding-top:40px;
+}
+
+.header img{
+    width:120px;
+    height:120px;
+    border-radius:150%;
+    object-fit:contain;
+}
+
+.text h1{
+    margin:0;
+    font-size:45px;
+    font-weight:800;
+    letter-spacing:1px;
+    color:#1e2a38;
+}
+
+.text p{
+    margin:5px 0 0;
+    font-size:20px;
+    text-align: center;
+    color:#1e2a38;
+
+}
+.home-link{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.topic-header{
+    background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+    padding:40px 20px;
+    text-align:center;
+    color:#1e2a38;
+}
+
+.header h1{
+    margin:0;
+    font-size:36px;
+}
+
+.container{
+    max-width:1000px;
+    margin:40px auto;
+    padding:20px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.project-img{
+    width:50%;
+    border-radius:10px;
+margin:0 auto 25px auto;
+    display:block;}
+
+h2{
+    color:#764ba2;
+    margin-top:25px;
+}
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:8px;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-bottom:20px;
+    padding:8px 15px;
+    background:#1f4037;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+.back-btn:hover{
+    background:#14532d;
+}
+
+footer{
+  background:#078095;
+  width:100%;
+  color:#fff;
+  margin-top:40px;
+}
+
+footer .content{
+  max-width:1250px;
+  margin:auto;
+  padding:5px;
+}
+
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:10px;
+  flex-wrap:wrap;
+}
+
+.logo-details{
+  font-size:28px;
+  font-weight:500;
+}
+
+.media-icons a{
+  height:40px;
+  width:40px;
+  margin:10px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.2);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  transition:0.3s;
+}
+
+.media-icons a:hover{
+  background:#fff;
+  color:#078095;
+}
+.link-boxes{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+.box{
+  width:auto;               
+
+}
+
+.box .link_name{
+  display:none;             
+}
+
+.box{
+  display:flex;
+  gap:30px;                
+}
+
+.box li{
+  list-style:none;
+}
+.box li a{
+  color:#fff;
+  text-decoration:none;
+  opacity:0.8;
+  transition:0.3s;
+}
+
+.box li a:hover{
+  opacity:1;
+  text-decoration:underline;
+}
+
+.input-box input{
+  height:40px;
+  width:100%;
+  margin:5px 0;
+  border-radius:4px;
+  border:none;
+  padding:0 10px;
+}
+
+.input-box input[type="button"]{
+  background:#fff;
+  color:#078095;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.bottom-details{
+  background:#067282;
+  padding:15px 40px;
+}
+
+.bottom_text{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  font-size:14px;
+}
+
+.bottom_text a{
+  color:#fff;
+  margin-left:10px;
+  text-decoration:none;
+}
+
+.bottom_text a:hover{
+  text-decoration:underline;
+}
+
+@media (max-width:768px){
+  .top{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .link-boxes{
+    flex-direction:column;
+  }
+
+  .box{
+    width:100%;
+    margin-bottom:20px;
+  }
+
+  .bottom_text{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+</style>
+</head>
+<body>
+<a href="index.html" class="home-link">
+<div class="header">
+    <img src="image/logo.jpeg" alt="ProjectBuddy Logo">
+        <div class="text">
+        <h1>ProjectBuddy</h1>
+        <p>Student Collaboration Hub</p>
+    </div>
+</div>
+</a>
+
+<div class="topic-header">
+    <h1>Hydraulic Robotic Arm</h1>
+</div>
+
+<div class="container">
+
+<a href="9projects.html" class="back-btn">Back</a>
+
+<img src="image/hydraulic robotic arm.png"
+alt="Hydraulic Robotic Arm Model"
+class="project-img">
+
+<h2>Objective</h2>
+<ul>
+<li>To design and build a hydraulic robotic arm model using syringes and tubes.</li>
+<li>To demonstrate how liquids transmit force based on Pascal’s Law.</li>
+</ul>
+
+<h2>Need for the Project</h2>
+<p>Hydraulic systems are widely used in many real-life machines and technologies such as:</p>
+
+<ul>
+<li>Construction machines</li>
+<li>Car braking systems</li>
+<li>Industrial robots</li>
+<li>Medical equipment</li>
+</ul>
+
+<p>This model helps students understand:</p>
+
+<ul>
+<li>How pressure works in liquids</li>
+<li>How small force can lift heavy objects</li>
+<li>Basic robotics and mechanical movement</li>
+</ul>
+
+<h2>Why It Is Impressive</h2>
+<ul>
+<li>Looks like a real industrial robot</li>
+<li>Moves up, down, left, and right</li>
+<li>Can grab and lift small objects</li>
+<li>Demonstrates real-life physics concepts</li>
+<li>Easy to build and explain</li>
+</ul>
+
+<h2>Materials Required</h2>
+<ul>
+<li>Cardboard or plywood base</li>
+<li>6–8 plastic syringes (without needles)</li>
+<li>Plastic IV tubes or pipes</li>
+<li>Water (with food color for visibility)</li>
+<li>Glue gun or Fevicol</li>
+<li>Ice-cream sticks or wooden strips</li>
+<li>Nuts and bolts or pins (for joints)</li>
+<li>Small plastic cup (for gripping claw)</li>
+<li>Tape</li>
+<li>Cutter and scissors</li>
+</ul>
+
+<h2>Steps to Make the Model</h2>
+
+<ol>
+
+<li><b>Prepare the Base</b>
+<ul>
+<li>Fix a strong cardboard or wooden board as the base.</li>
+<li>Attach a vertical support for the arm.</li>
+</ul>
+</li>
+
+<li><b>Make the Arm Structure</b>
+<ul>
+<li>Use ice-cream sticks or wooden strips to create the base support, lower arm, upper arm, and claw.</li>
+<li>Join parts using nuts, bolts, or pins to allow movement.</li>
+</ul>
+</li>
+
+<li><b>Prepare the Hydraulic System</b>
+<ul>
+<li>Fill syringes with colored water.</li>
+<li>Remove air bubbles completely.</li>
+<li>Connect two syringes using a plastic tube.</li>
+</ul>
+</li>
+
+<li><b>Attach Syringes</b>
+<ul>
+<li>Fix one syringe to the arm joint.</li>
+<li>Keep the connected syringe in hand for control.</li>
+<li>Repeat this for arm lifting, bending, and claw gripping.</li>
+</ul>
+</li>
+
+<li><b>Testing</b>
+<ul>
+<li>Push one syringe.</li>
+<li>Observe the connected syringe moving.</li>
+<li>The arm moves accordingly.</li>
+</ul>
+</li>
+
+</ol>
+
+<h2> How It Works</h2>
+
+<p>The model works on <b>Pascal's Law</b>.</p>
+
+<p>
+Pascal’s Law states that pressure applied to a confined liquid is transmitted equally in all directions.
+</p>
+
+<ul>
+<li>When one syringe is pushed, pressure is created in the water.</li>
+<li>The water transfers this pressure through the tube.</li>
+<li>The piston of the second syringe moves.</li>
+<li>This movement causes the robotic arm to lift or grab objects.</li>
+</ul>
+
+<p>
+Since liquids are nearly incompressible, the force is transmitted efficiently.
+</p>
+
+<h2>Result / Output</h2>
+<ul>
+<li>The robotic arm moves smoothly using water pressure.</li>
+<li>It can lift small objects like paper balls or erasers.</li>
+<li>Clearly demonstrates hydraulic force.</li>
+<li>Successfully proves Pascal’s Law.</li>
+</ul>
+
+<h2>Concepts Used</h2>
+<ul>
+<li>Pascal’s Law</li>
+<li>Pressure in liquids</li>
+<li>Hydraulics</li>
+<li>Force transmission</li>
+<li>Basic robotics</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+The Hydraulic Robotic Arm model demonstrates the practical application of Pascal’s Law in hydraulic systems. 
+It helps students understand how liquids can transmit force and how hydraulic technology is used in modern machinery and robotics.
+</p>
+
+</div>
+</div>
+
+<footer>
+  <div class="content">
+
+    <div class="top">
+      <div class="logo-details">
+         <span class="logo_name">ProjectBuddy</span>
+      </div>
+
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="link-boxes">
+
+      <ul class="box">
+        <li class="link_name">Website</li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="signin.html">Login</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="admin.html">Admin</a></li>
+
+        <li class="link_name">Account</li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+
+    
+    </div>
+  </div>
+
+  <div class="bottom-details">
+    <div class="bottom_text">
+      <span>
+        Copyright © 2026 ProjectBuddy. All rights reserved
+      </span>
+      <span>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Irrigation System- ProjectBuddy</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+}
+
+.header{
+    display:flex;
+background:#7db3bd;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    padding-top:40px;
+}
+
+.header img{
+    width:120px;
+    height:120px;
+    border-radius:150%;
+    object-fit:contain;
+}
+
+.text h1{
+    margin:0;
+    font-size:45px;
+    font-weight:800;
+    letter-spacing:1px;
+    color:#1e2a38;
+}
+
+.text p{
+    margin:5px 0 0;
+    font-size:20px;
+    text-align: center;
+    color:#1e2a38;
+
+}
+.home-link{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.topic-header{
+    background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+    padding:40px 20px;
+    text-align:center;
+    color:#1e2a38;
+}
+
+.header h1{
+    margin:0;
+    font-size:36px;
+}
+
+.container{
+    max-width:1000px;
+    margin:40px auto;
+    padding:20px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.project-img{
+    width:50%;
+    border-radius:10px;
+margin:0 auto 25px auto;
+    display:block;}
+
+h2{
+    color:#764ba2;
+    margin-top:25px;
+}
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:8px;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-bottom:20px;
+    padding:8px 15px;
+    background:#1f4037;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+.back-btn:hover{
+    background:#14532d;
+}
+
+footer{
+  background:#078095;
+  width:100%;
+  color:#fff;
+  margin-top:40px;
+}
+
+footer .content{
+  max-width:1250px;
+  margin:auto;
+  padding:5px;
+}
+
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:10px;
+  flex-wrap:wrap;
+}
+
+.logo-details{
+  font-size:28px;
+  font-weight:500;
+}
+
+.media-icons a{
+  height:40px;
+  width:40px;
+  margin:10px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.2);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  transition:0.3s;
+}
+
+.media-icons a:hover{
+  background:#fff;
+  color:#078095;
+}
+.link-boxes{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+.box{
+  width:auto;               
+
+}
+
+.box .link_name{
+  display:none;             
+}
+
+.box{
+  display:flex;
+  gap:30px;                
+}
+
+.box li{
+  list-style:none;
+}
+.box li a{
+  color:#fff;
+  text-decoration:none;
+  opacity:0.8;
+  transition:0.3s;
+}
+
+.box li a:hover{
+  opacity:1;
+  text-decoration:underline;
+}
+
+.input-box input{
+  height:40px;
+  width:100%;
+  margin:5px 0;
+  border-radius:4px;
+  border:none;
+  padding:0 10px;
+}
+
+.input-box input[type="button"]{
+  background:#fff;
+  color:#078095;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.bottom-details{
+  background:#067282;
+  padding:15px 40px;
+}
+
+.bottom_text{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  font-size:14px;
+}
+
+.bottom_text a{
+  color:#fff;
+  margin-left:10px;
+  text-decoration:none;
+}
+
+.bottom_text a:hover{
+  text-decoration:underline;
+}
+
+@media (max-width:768px){
+  .top{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .link-boxes{
+    flex-direction:column;
+  }
+
+  .box{
+    width:100%;
+    margin-bottom:20px;
+  }
+
+  .bottom_text{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+</style>
+</head>
+<body>
+<a href="index.html" class="home-link">
+<div class="header">
+    <img src="image/logo.jpeg" alt="ProjectBuddy Logo">
+        <div class="text">
+        <h1>ProjectBuddy</h1>
+        <p>Student Collaboration Hub</p>
+    </div>
+</div>
+</a>
+
+<div class="topic-header">
+    <h1>Smart Irrigation System </h1>
+</div>
+
+<div class="container">
+
+<a href="9projects.html" class="back-btn">Back</a>
+
+<img src="image/smart irrigation system.png"
+alt="Smart Irrigation System Model"
+class="project-img">
+
+<h2> Aim of the Project</h2>
+<ul>
+<li>To design a smart irrigation system that automatically supplies water to plants when the soil becomes dry.</li>
+</ul>
+
+<h2> Objective</h2>
+<ul>
+<li>To save water by avoiding over-irrigation.</li>
+<li>To understand the use of sensors and automation.</li>
+<li>To develop an agriculture-based innovation.</li>
+</ul>
+
+<h2> Need of the Project</h2>
+<ul>
+<li>Traditional irrigation wastes a lot of water.</li>
+<li>Farmers often face water scarcity.</li>
+<li>Manual watering is time-consuming.</li>
+<li>Smart systems help in water conservation.</li>
+</ul>
+
+<h2> Scientific Principles Used</h2>
+<ul>
+<li>Soil moisture detection</li>
+<li>Sensors</li>
+<li>Automation</li>
+<li>Basic electronics</li>
+<li>Water conservation</li>
+</ul>
+
+<h2> Materials Required</h2>
+<ul>
+<li>Soil moisture sensor</li>
+<li>Arduino UNO (or simple relay module)</li>
+<li>Mini DC water pump</li>
+<li>Relay module</li>
+<li>Plastic pipe or tube</li>
+<li>Battery or power supply</li>
+<li>Connecting wires</li>
+<li>Plant pot with soil</li>
+<li>Cardboard or thermocol base</li>
+<li>Water container</li>
+</ul>
+
+<h2> Block Diagram (Concept)</h2>
+<p>
+Soil → Moisture Sensor → Controller → Water Pump → Plants
+</p>
+
+<h2> Steps to Make the Model</h2>
+<ol>
+<li>Fix a plant pot on a cardboard or thermocol base.</li>
+<li>Insert the soil moisture sensor into the soil.</li>
+<li>Connect the sensor to the Arduino or relay module.</li>
+<li>Connect the water pump to the relay module.</li>
+<li>Attach a pipe from the pump to the plant pot.</li>
+<li>Place the pump inside the water container.</li>
+<li>Connect the power supply.</li>
+<li>Program the Arduino or adjust relay to turn ON the pump when soil is dry.</li>
+</ol>
+
+<h2> How It Works</h2>
+<ul>
+<li>The soil moisture sensor measures the moisture level in the soil.</li>
+<li>If the soil becomes dry, the sensor sends a signal to the controller.</li>
+<li>The controller activates the water pump.</li>
+<li>Water flows through the pipe and irrigates the plant.</li>
+<li>When the soil becomes sufficiently wet, the pump automatically stops.</li>
+</ul>
+
+<h2> Result / Output</h2>
+<ul>
+<li>Water is supplied to plants only when required.</li>
+<li>No unnecessary water wastage occurs.</li>
+<li>Plants remain healthy with proper irrigation.</li>
+<li>Fully automatic irrigation is achieved.</li>
+</ul>
+
+<h2> Applications</h2>
+<ul>
+<li>Agriculture fields</li>
+<li>Gardens</li>
+<li>Greenhouses</li>
+<li>Farms</li>
+<li>Smart villages</li>
+</ul>
+
+<h2> Advantages</h2>
+<ul>
+<li>Saves water</li>
+<li>Reduces human effort</li>
+<li>Automatic operation</li>
+<li>Low cost and eco-friendly</li>
+<li>Improves crop yield</li>
+</ul>
+
+<h2> Conclusion</h2>
+<p>
+The Smart Irrigation System is an effective solution for modern agriculture. 
+It helps farmers conserve water and ensures proper irrigation by using smart 
+technology and soil moisture sensors.
+</p>
+
+</div>
+</div>
+
+<footer>
+  <div class="content">
+
+    <div class="top">
+      <div class="logo-details">
+         <span class="logo_name">ProjectBuddy</span>
+      </div>
+
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="link-boxes">
+
+      <ul class="box">
+        <li class="link_name">Website</li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="signin.html">Login</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="admin.html">Admin</a></li>
+
+        <li class="link_name">Account</li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+
+
+    
+    </div>
+  </div>
+
+  <div class="bottom-details">
+    <div class="bottom_text">
+      <span>
+        Copyright © 2026 ProjectBuddy. All rights reserved
+      </span>
+      <span>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

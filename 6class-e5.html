@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Neighbourhood Survey- Project Buddy</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+}
+
+
+.header{
+    display:flex;
+background:#7db3bd;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    padding-top:40px;
+}
+
+
+.header img{
+    width:120px;
+    height:120px;
+    border-radius:150%;
+    object-fit:contain;
+}
+
+.text h1{
+    margin:0;
+    font-size:45px;
+    font-weight:800;
+    letter-spacing:1px;
+    color:#1e2a38;
+}
+
+.text p{
+    margin:5px 0 0;
+    font-size:20px;
+    text-align: center;
+    color:#1e2a38;
+
+}
+.home-link{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+
+
+.topic-header{
+    background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+    padding:40px 20px;
+    text-align:center;
+    color:#1e2a38;
+}
+
+.header h1{
+    margin:0;
+    font-size:36px;
+}
+
+
+.container{
+    max-width:1000px;
+    margin:40px auto;
+    padding:20px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+
+.project-img{
+    width:50%;
+    border-radius:10px;
+margin:0 auto 25px auto;
+    display:block;}
+
+
+h2{
+    color:#764ba2;
+    margin-top:25px;
+}
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:8px;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-bottom:20px;
+    padding:8px 15px;
+    background:#1f4037;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+.back-btn:hover{
+    background:#14532d;
+}
+
+footer{
+  background:#078095;
+  width:100%;
+  color:#fff;
+  margin-top:40px;
+}
+
+footer .content{
+  max-width:1250px;
+  margin:auto;
+  padding:5px;
+}
+
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:10px;
+  flex-wrap:wrap;
+}
+
+.logo-details{
+  font-size:28px;
+  font-weight:500;
+}
+
+.media-icons a{
+  height:40px;
+  width:40px;
+  margin:10px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.2);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  transition:0.3s;
+}
+
+.media-icons a:hover{
+  background:#fff;
+  color:#078095;
+}
+.link-boxes{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+.box{
+  width:auto;               
+
+}
+
+.box .link_name{
+  display:none;             
+}
+
+.box{
+  display:flex;
+  gap:30px;                
+}
+
+.box li{
+  list-style:none;
+}
+.box li a{
+  color:#fff;
+  text-decoration:none;
+  opacity:0.8;
+  transition:0.3s;
+}
+
+.box li a:hover{
+  opacity:1;
+  text-decoration:underline;
+}
+
+.input-box input{
+  height:40px;
+  width:100%;
+  margin:5px 0;
+  border-radius:4px;
+  border:none;
+  padding:0 10px;
+}
+
+.input-box input[type="button"]{
+  background:#fff;
+  color:#078095;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.bottom-details{
+  background:#067282;
+  padding:15px 40px;
+}
+
+.bottom_text{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  font-size:14px;
+}
+
+.bottom_text a{
+  color:#fff;
+  margin-left:10px;
+  text-decoration:none;
+}
+
+.bottom_text a:hover{
+  text-decoration:underline;
+}
+
+
+@media (max-width:768px){
+  .top{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .link-boxes{
+    flex-direction:column;
+  }
+
+  .box{
+    width:100%;
+    margin-bottom:20px;
+  }
+
+  .bottom_text{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+
+</style>
+</head>
+<body>
+<a href="index.html" class="home-link">
+<div class="header">
+    <img src="image/logo.jpeg" alt="ProjectBuddy Logo">
+        <div class="text">
+        <h1>ProjectBuddy</h1>
+        <p>Student Collaboration Hub</p>
+    </div>
+</div>
+</a>
+
+<div class="topic-header">
+    <h1>My Neighbourhood Survey</h1>
+</div>
+
+<div class="container">
+
+<a href="6projects.html" class="back-btn">Back</a>
+
+<img src="image/My Neighbourhood Survey.png"
+     alt="My Neighbourhood Survey Project" 
+     class="project-img">
+
+<h2>Introduction</h2>
+<p>
+A neighbourhood is the area around our home where people live and share common facilities such as roads, parks, schools, and markets.
+</p>
+
+<p>
+Conducting a neighbourhood survey helps us understand the condition of our surroundings, including cleanliness, waste management, and public services.
+</p>
+
+<p>
+This project encourages students to observe their surroundings and learn how community participation helps maintain a clean and healthy environment.
+</p>
+
+<h2>Objective</h2>
+<ul>
+<li>To study the facilities available in the neighbourhood.</li>
+<li>To understand the importance of cleanliness and sanitation.</li>
+<li>To collect information about waste management and public services.</li>
+<li>To create awareness about keeping the neighbourhood clean.</li>
+</ul>
+
+<h2>Concepts Used</h2>
+<ul>
+<li>Community and Civic Sense</li>
+<li>Cleanliness and Sanitation</li>
+<li>Public Services</li>
+<li>Waste Management</li>
+<li>Environmental Awareness</li>
+</ul>
+
+<h2>Materials Required</h2>
+<ul>
+<li>Notebook and pen (for survey questions)</li>
+<li>Chart paper or cardboard</li>
+<li>Scale and pencil</li>
+<li>Colors or sketch pens</li>
+<li>Printed survey table (optional)</li>
+<li>Pictures (optional)</li>
+</ul>
+
+<h2>Steps to Do the Survey</h2>
+<ol>
+<li>Prepare simple survey questions such as: Are there dustbins in the area? Is garbage collected daily? Are the roads clean? Are there parks and trees nearby? Is there a proper drainage system?</li>
+<li>Visit your neighbourhood and politely ask 5–10 neighbours these questions.</li>
+<li>Record the answers in a simple table showing “Yes” or “No”.</li>
+<li>Draw a neighbourhood map showing houses, roads, parks, shops, schools, temples, and dustbins.</li>
+<li>Write a conclusion explaining the cleanliness and facilities in your neighbourhood and suggest improvements if needed.</li>
+</ol>
+
+<h2>How It Works</h2>
+<p>
+A survey is a method used to collect information from people by asking questions.
+</p>
+
+<ul>
+<li>By analyzing survey answers, we can understand the problems and facilities in our neighbourhood.</li>
+<li>Clean surroundings help reduce diseases and improve health.</li>
+<li>Proper waste management keeps the environment clean.</li>
+<li>Parks and trees improve air quality and make the area healthier.</li>
+</ul>
+
+<h2>Expected Result</h2>
+<ul>
+<li>The survey provides information about the condition of the neighbourhood.</li>
+<li>Students learn the importance of cleanliness and civic responsibility.</li>
+<li>The project encourages people to keep their surroundings clean and healthy.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+A clean and well-managed neighbourhood improves the quality of life for everyone. Proper waste disposal, regular garbage collection, and green spaces help maintain a healthy environment.
+</p>
+
+<p>
+Community cooperation and responsible behaviour are important for keeping neighbourhoods safe, clean, and pleasant to live in.
+</p>
+
+</div>
+
+
+<footer>
+  <div class="content">
+
+    <div class="top">
+      <div class="logo-details">
+         <span class="logo_name">ProjectBuddy</span>
+      </div>
+
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="link-boxes">
+
+    <ul class="box">
+        <li class="link_name">Website</li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="signin.html">Login</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="admin.html">Admin</a></li>
+
+        <li class="link_name">Account</li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+
+    
+    </div>
+  </div>
+
+  <div class="bottom-details">
+    <div class="bottom_text">
+      <span>
+        Copyright © 2026 ProjectBuddy. All rights reserved
+      </span>
+      <span>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

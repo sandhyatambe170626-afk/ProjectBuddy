@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>ProjectBuddy Contact</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:linear-gradient(-45deg,#667eea,#764ba2,#f093fb,#f5576c);
+background-size:400% 400%;
+animation:gradient 10s ease infinite;
+}
+
+@keyframes gradient{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+.box{
+background:white;
+padding:35px;
+border-radius:20px;
+width:380px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.header{
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.header img{
+width:100px;
+height:100px;
+border-radius:150%;
+object-fit:contain;
+}
+
+.text h1{
+margin:0;
+font-size:30px;
+font-weight:800;
+letter-spacing:1px;
+color:#1e2a38;
+}
+
+.text p{
+margin:5px 0 0;
+font-size:10px;
+text-align:left;
+color:#1e2a38;
+}
+
+.home-link{
+text-decoration:none;
+color:inherit;
+display:block;
+}
+
+h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+.inputBox{
+position:relative;
+margin-top:18px;
+}
+
+.inputBox input,
+.inputBox textarea,
+.inputBox select{
+width:100%;
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+outline:none;
+}
+
+textarea{
+resize:none;
+height:90px;
+}
+
+.inputBox label{
+position:absolute;
+top:-8px;
+left:10px;
+background:white;
+padding:0 5px;
+font-size:12px;
+color:#666;
+}
+
+.counter{
+text-align:right;
+font-size:11px;
+color:#777;
+}
+
+button{
+margin-top:15px;
+padding:12px;
+width:100%;
+border:none;
+background:#6c4cff;
+color:white;
+border-radius:10px;
+font-size:15px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+background:#4c32d1;
+}
+
+.success{
+display:none;
+margin-top:15px;
+padding:10px;
+background:#d4edda;
+color:#155724;
+border-radius:8px;
+text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<a href="index.html" class="home-link">
+<div class="header">
+<img src="image/logo.jpeg" alt="ProjectBuddy Logo">
+<div class="text">
+<h1>ProjectBuddy</h1>
+<p>Student Collaboration Hub</p>
+</div>
+</div>
+</a>
+
+<h2>📩 Contact ProjectBuddy</h2>
+
+<div class="inputBox">
+<label>Name</label>
+<input id="name" placeholder="Enter your name">
+</div>
+
+<div class="inputBox">
+<label>Email</label>
+<input id="email" placeholder="Enter your email">
+</div>
+
+<div class="inputBox">
+<label>Project Type</label>
+
+<select id="project">
+<option>Science Project</option>
+<option>EVS Project</option>
+<option>Working Model</option>
+<option>Assignment Help</option>
+</select>
+
+</div>
+
+<div class="inputBox">
+
+<label>Message</label>
+
+<textarea id="message" maxlength="200" onkeyup="countChars()"
+placeholder="Write your question or project request..."></textarea>
+
+<div class="counter" id="counter">0 / 200</div>
+
+</div>
+
+<button id="sendBtn" onclick="sendData()">Send Request 🚀</button>
+
+<div class="success" id="successMsg">
+✅ Request Sent Successfully!
+</div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+
+const firebaseConfig = {
+apiKey: "AIzaSyCmn1FoHjGE573KKGxYCXnENAvLPwQpDl8",
+authDomain: "projectbuddy-2d19a.firebaseapp.com",
+databaseURL: "https://projectbuddy-2d19a-default-rtdb.firebaseio.com",
+projectId: "projectbuddy-2d19a",
+storageBucket: "projectbuddy-2d19a.firebasestorage.app",
+messagingSenderId: "620666475411",
+appId: "1:620666475411:web:074cccd91cb44d4a508e66"
+};
+
+firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
+
+(function(){
+emailjs.init("NPhhfY-IZFJ0WC0jf");
+})();
+
+function sendData(){
+
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+let project = document.getElementById("project").value;
+let message = document.getElementById("message").value;
+
+if(name=="" || email=="" || message==""){
+alert("Please fill all fields");
+return;
+}
+
+document.getElementById("sendBtn").innerText="Sending...";
+
+database.ref("messages").push({
+
+name:name,
+email:email,
+project:project,
+message:message,
+timestamp:Date.now()
+
+})
+.then(function(){
+
+return emailjs.send(
+"service_kp5omg3",
+"template_a9fqwx9",
+{
+from_name:name,
+from_email:email,
+project_type:project,
+message:message,
+reply_to:email
+}
+
+);
+
+})
+.then(function(){
+
+document.getElementById("successMsg").style.display="block";
+
+document.getElementById("name").value="";
+document.getElementById("email").value="";
+document.getElementById("message").value="";
+
+document.getElementById("sendBtn").innerText="Send Request 🚀";
+
+})
+.catch(function(error){
+
+console.log("Error:",error);
+alert("Something went wrong");
+
+});
+
+}
+
+function countChars(){
+
+let text = document.getElementById("message").value.length;
+
+document.getElementById("counter").innerText = text + " / 200";
+
+}
+
+</script>
+
+</body>
+</html>
